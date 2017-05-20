@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.test.service.ServiceActivity">
+
+    <TextView
+
+        android:layout_marginTop="10dp"
+        android:textColor="#ff00ff"
+        android:text="音乐播放器"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+
+        android:layout_marginTop="10dp"
+        android:id="@+id/Button01"
+        android:text="开启音乐播放器"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+
+        android:layout_marginTop="10dp"
+        android:id="@+id/Button02"
+        android:text="停止音乐播放器"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button android:text=" 绑定音乐播放服务 "
+        android:textSize="20sp"
+        android:id="@+id/Button03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+    </Button>
+    <Button android:text=" 解绑定音乐播放服务 "
+        android:textSize="20sp"
+        android:id="@+id/Button04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+
+
+</LinearLayout>

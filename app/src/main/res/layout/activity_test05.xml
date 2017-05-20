@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+    <GridLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        >
+
+    </GridLayout>
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        >
+        <TextView
+            android:text="hahahah"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:layout_width="300dp"
+        android:layout_height="100dp">
+
+    </FrameLayout>
+    <TableLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="300dp"
+        android:layout_height="100dp">
+
+    </TableLayout>
+</LinearLayout>

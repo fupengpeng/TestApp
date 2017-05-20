@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_weight="0.1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="添加或者注册账号"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/text_login_03"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:text="取消"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="0.10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText_login_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.8"
+            android:hint="请输入账号" >
+
+        </EditText>
+
+        <Spinner
+            android:id="@+id/spinner_login_01"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:entries="@array/account">
+
+        </Spinner>
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/editText_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.1"
+        android:hint="请输入密码"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.1"
+            android:text="记住密码"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+        <CheckBox
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.1"
+            android:text="自动登录"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/button_login_01"
+        android:text="登录"
+        android:gravity="center"
+        android:layout_weight="0.1"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:textSize="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/text_login_01"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:textColor="#ff5566"
+            android:textSize="20dp"
+            android:text="忘记密码？"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"  />
+        <TextView
+            android:id="@+id/text_login_02"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="新用户注册"
+            android:textColor="#ff5566"
+            android:textSize="20dp" />
+    </LinearLayout>
+    <TextView
+        android:layout_weight="0.9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

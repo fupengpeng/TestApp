@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="text_translate">移动效果</string>
+    <string name="text_rotate">旋转动画</string>
+    <string name="text_scale">缩放动画</string>
+    <string name="text_alpha">透明动画</string>
+    <string name="text_set">综合实现set_demo.xml中的动画</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="label_cancel">取消</string>
+    <string name="label_ok">确定</string>
+    <string name="permission_title_rationale">权限需求</string>
+    <string name="permission_read_storage_rationale">选择图片时需要读取权限</string>
+    <string name="permission_write_storage_rationale">拍照时需要存储权限</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="_lease_open_permissions">隐藏</string>
+    <string name="choose_wallpaper">开始</string>
+
+
+    <string name="color">选择色彩</string>
+    <string-array name="colors">
+        <item>黑色 | Black</item>
+        <item>蓝色 | Blue</item>
+        <item>棕色 | Brown</item>
+        <item>绿色 | Green</item>
+        <item>粉色 | Pink</item>
+        <item>紫色 | Pruple</item>
+        <item>红色 | Red</item>
+    </string-array>
+</resources>
