@@ -30,6 +30,7 @@ public class MyAdapter  extends BaseAdapter {
                      int resource, String[] from, int[] to) {
         this.context = context;
         this.list = list;
+
         keyString = new String[from.length];
         idValue = new int[to.length];
         System.arraycopy(from, 0, keyString, 0, from.length);
@@ -66,22 +67,34 @@ public class MyAdapter  extends BaseAdapter {
         ViewHolder holder = null;
         if (holder == null) {
             holder = new ViewHolder();
+
             if (view == null) {
                 view = inflater.inflate(R.layout.listviewitem, null);
             }
+
             holder.tv = (TextView) view.findViewById(R.id.item_tv);
             holder.cb = (CheckBox) view.findViewById(R.id.item_cb);
             view.setTag(holder);
+
         } else {
             holder = (ViewHolder) view.getTag();
         }
+
         HashMap<String, Object> map = list.get(position);
+
         if (map != null) {
             itemString = (String) map.get(keyString[0]);
             holder.tv.setText(itemString);
         }
+
         holder.cb.setChecked(isSelected.get(position));
+
         return view;
+    }
+
+    class ViewHolder {
+        public TextView tv = null;
+        public CheckBox cb = null;
     }
 
 }

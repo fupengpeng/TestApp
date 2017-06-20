@@ -7,29 +7,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context="com.fupengpeng.selectall.selecttitle.Main2Activity">
-    <LinearLayout
-        android:orientation="vertical"
+
+    <ListView
+        android:id="@+id/lv"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        >
-        <TextView
-            android:text="xiangyiqi"
-            android:background="#ffaaaa"
-            android:id="@+id/tv"
-            android:layout_width="fill_parent"
-            android:layout_height="50dip"
-            android:textColor="#FCFCFC"
-            android:textSize="11pt"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="10dip"
-            />
-        <ListView
-            android:id="@+id/lv"
-            android:layout_width="fill_parent"
-            android:layout_height="381dip"
-            android:cacheColorHint ="#00000000"
-            ></ListView>
-    </LinearLayout>
+        android:layout_height="381dip"
+        android:cacheColorHint ="#00000000" />
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="53dip"
@@ -71,8 +55,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="100dip"
-            android:text="原创:Simtice                                  QQ:512375320"
-            android:layout_marginLeft="10dip"
+            android:text="原创:Simtice    QQ:512375320"
             />
     </LinearLayout>
 </LinearLayout>
