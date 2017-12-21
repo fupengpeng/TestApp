@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--设定隐藏左边边框-->
+    <item android:left="-2dp">
+        <shape>
+            <solid android:color="@android:color/transparent" />
+            <!-- 填充的颜色 -->
+            <solid android:color="#f2f2f2" />
+
+            <!-- 边框的颜色和粗细 -->
+            <stroke
+                android:width="2dp"
+                android:color="#c8c8c8" />
+
+            <!-- android:radius 圆角的半径 -->
+            <corners
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="22.5dp"
+                android:topLeftRadius="0dp"
+                android:topRightRadius="22.5dp" />
+        </shape>
+    </item>
+</layer-list>

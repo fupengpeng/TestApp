@@ -8,8 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/androidtestapp" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/selectall" />
+            <option value="$PROJECT_DIR$/lib-zxing" />
+            <option value="$PROJECT_DIR$/pulltorefresh" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

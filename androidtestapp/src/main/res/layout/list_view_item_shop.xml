@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <!-- Logo -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Logo -->
+        <com.fpp.androidtestapp.customerview.CircleImageView
+            android:id="@+id/iv_shop_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <!--认证信息 -->
+        <TextView
+            android:id="@+id/tv_cer"
+            android:layout_width="56dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="-15dp"
+            android:background="@drawable/shape_rounded_rectangle_red"
+            android:gravity="center"
+            android:text="待认证"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- 店名,地址 -->
+    <LinearLayout
+        android:layout_marginStart="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- 店名 -->
+        <TextView
+            android:textSize="18sp"
+            android:textColor="#222222"
+            android:id="@+id/tv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一店" />
+
+        <!-- 地址 -->
+        <TextView
+            android:textSize="13sp"
+            android:textColor="#666666"
+            android:id="@+id/tv_shop_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="琵琶山大市场" />
+
+    </LinearLayout>
+
+    <!-- 当前标识 -->
+    <LinearLayout
+        android:id="@+id/ll_curr_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/shop_address" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:text="当前所在" />
+
+    </LinearLayout>
+
+</LinearLayout>

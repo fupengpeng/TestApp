@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 设置按钮的圆角半径 -->
+    <corners android:radius="35dp" />
+
+    <!-- 设置图形渐变颜色 -->
+    <gradient
+        android:endColor="#E5CC96"
+        android:startColor="#E5CC96" />
+
+</shape>

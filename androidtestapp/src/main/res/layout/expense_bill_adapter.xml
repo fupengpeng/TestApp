@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/client_img_bill_state"
+            android:background="@drawable/ic_label_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/client_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/client_text_mean_size"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorWhite"
+                android:text="1"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/client_bill_state"
+            android:layout_gravity="center"
+            android:textColor="@color/clientUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/checkout"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/client_time"
+        android:layout_alignParentEnd="true"
+        android:textSize="12sp"
+        android:text="2017-12-05"
+        android:layout_marginRight="15dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/timeAndPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+    <RelativeLayout
+        android:background="@color/view_background"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.fpp.androidtestapp.customerview.CircleImageView
+                android:id="@+id/client_user_img"
+                android:layout_width="@dimen/client_user_img"
+                android:layout_height="@dimen/client_user_img"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/client_list_view"
+                android:layout_marginRight="@dimen/client_list_view"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_person_black_24dp"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/client_user_name"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/client_right"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/clientUserName"
+                    android:text="@string/client_user_name" />
+    <ImageView
+        android:id="@+id/client_user_sex"
+        android:src="@drawable/man"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/client_user_sex"
+        android:layout_height="@dimen/client_user_sex" />
+</LinearLayout>
+                <TextView
+                    android:id="@+id/client_phone"
+                    android:text="136*****634"
+                    android:textSize="10sp"
+                    android:textColor="@color/timeAndPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/client_call_up"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/client_call_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/ic_phone_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/timeAndPhone"
+                android:text="@string/client_call"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/client_gap">
+        <TextView
+            android:id="@+id/client_service_and_commodity"
+            android:layout_width="wrap_content"
+            android:text="共: 1个项目 0件商品"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:textSize="12sp"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:text="@string/client_all_price"
+                android:textColor="@color/clientUserName"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/client_right"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/client_all_price"
+                android:text="40.00"
+                android:textColor="@color/client_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:background="@color/client_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/client_view"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/client_checkout"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:layout_marginEnd="15dp"
+        android:layout_width="@dimen/client_round_frame_wight"
+        android:layout_height="@dimen/client_round_frame_height"
+        android:background="@drawable/btn_search_bg">
+        <TextView
+            android:text="@string/client_checkout_quick_mark"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/client_text_mean_size"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/quick_mark"
+            android:layout_width="@dimen/client_quick_mark"
+            android:layout_height="@dimen/client_quick_mark" />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/cancellation_of_order"
+            android:text="@string/client_view_details"
+            android:textColor="@color/timeAndPhone"
+            android:layout_margin="@dimen/client_gap"
+            android:layout_toLeftOf="@id/client_checkout"
+            android:gravity="center"
+            android:textSize="@dimen/client_text_mean_size"
+            android:background="@drawable/btn_order_form_particulars"
+            android:layout_width="@dimen/client_round_frame_wight"
+            android:layout_height="@dimen/client_round_frame_height" />
+    </RelativeLayout>
+</LinearLayout>

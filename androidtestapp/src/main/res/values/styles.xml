@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">15sp</item>
+        <!--<item name="android:textSize">@dimen/text_16_sp</item>-->
+    </style>
+
+    <!-- 侧滑菜单项 -->
+    <style name="left_menu_item">
+        <item name="android:paddingStart">@dimen/left_menu_padding_start</item>
+        <item name="android:paddingEnd">@dimen/left_menu_padding_end</item>
+        <item name="android:paddingTop">@dimen/left_menu_padding_top</item>
+        <item name="android:paddingBottom">@dimen/left_menu_padding_bottom</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--一键开单popupwindow-->
+    <style name="popup_window_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    </style>
+    <style name="take_photo_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    </style>
+
+    <!--order-->
+    <style name="OrderTheme" parent="AppTheme">
+        <item name="android:statusBarColor">@color/order_status</item>
+    </style>
+
+    <!--checkbox-->
+    <style name="circlecheckbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/order_item_select</item>
+        <item name="android:paddingLeft">10.0dp</item>
+        <item name="android:height">35dp</item>
+    </style>
+</resources>

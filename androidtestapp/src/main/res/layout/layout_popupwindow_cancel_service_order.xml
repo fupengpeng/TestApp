@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--取消服务单-->
+    <TextView
+        android:id="@+id/tv_layout_pw_cancel_service_order"
+        android:text="取消服务单"
+        android:background="#ffffff"
+        android:textColor="#ff0000"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/order_subheading_text_size"
+        android:layout_height="45dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <!--取消-->
+    <TextView
+        android:id="@+id/tv_layout_pw_cancel"
+        android:textSize="@dimen/order_subheading_text_size"
+        android:text="取消"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 通用 -->
+    <!-- EditText字体大小 -->
+    <dimen name="common_edit_text_text_size">@dimen/x14</dimen>
+    <!-- 分割线高度 -->
+    <dimen name="common_split_line_size">1dp</dimen>
+    <!-- 按钮高度 -->
+    <dimen name="common_button_height">@dimen/y27</dimen>
+    <!-- 按钮字体大小 -->
+    <dimen name="common_button_text_size">@dimen/x16</dimen>
+    <!-- 正文字体大小 -->
+    <dimen name="common_content_text_size">@dimen/x13</dimen>
+
+    <!-- 登录界面 -->
+    <!-- logo -->
+    <dimen name="login_view_logo_margin_top">@dimen/y6</dimen>
+    <!-- 左右边距 -->
+    <dimen name="login_view_margin_start_end">@dimen/x45</dimen>
+    <!-- 手机号 -->
+    <dimen name="login_view_phone_margin_top">@dimen/y19</dimen>
+    <!-- 分割线 -->
+    <dimen name="login_view_split_line_margin_top">@dimen/y2</dimen>
+    <!-- 密码 -->
+    <dimen name="login_view_password_margin_top">@dimen/y12</dimen>
+    <!-- 按钮 -->
+    <dimen name="login_view_button_margin_top">@dimen/y25</dimen>
+    <!-- 通过验证码登录 -->
+    <dimen name="login_view_code_login_margin_bottom">@dimen/y32</dimen>
+    <dimen name="login_view_code_login_text_size">14sp</dimen>
+
+    <!-- 侧滑菜单 -->
+    <dimen name="left_menu_main_title_text_size">@dimen/x14</dimen>
+    <dimen name="left_menu_state_title_text_size">@dimen/x10</dimen>
+    <dimen name="left_menu_right_text_margin_end">@dimen/x10</dimen>
+    <dimen name="left_menu_padding_start">@dimen/x18</dimen>
+    <dimen name="left_menu_padding_end">@dimen/x11</dimen>
+    <dimen name="left_menu_padding_top">@dimen/y7</dimen>
+    <dimen name="left_menu_padding_bottom">@dimen/y7</dimen>
+    <dimen name="left_menu_right_arrow_size">@dimen/x12</dimen>
+
+    <!-- 店铺 -->
+    <!-- 头部高度 -->
+    <dimen name="shop_view_top_height">876px</dimen>
+    <!-- 门店logo -->
+    <dimen name="shop_view_top_logo_size">400px</dimen>
+    <dimen name="shop_view_top_logo_margin_top">100px</dimen>
+    <!-- 最下层 -->
+    <dimen name="shop_view_top_bottom_iv_size">700px</dimen>
+    <!-- 中间层 -->
+    <dimen name="shop_view_top_middle_iv_size">600px</dimen>
+    <!-- 最上层 -->
+    <dimen name="shop_view_top_top_iv_size">510px</dimen>
+    <!-- 未处理订单数量 -->
+    <dimen name="shop_view_top_un_deal_order_number_margin_top">160px</dimen>
+
+    <!--客户账单-->
+    <dimen name="client_right">5dp</dimen>
+    <dimen name="client_list_view">10dp</dimen>
+    <dimen name="client_user_img">40dp</dimen>
+    <!--子条目之间的距离-->
+    <dimen name="client_adapter_view_gap">5dp</dimen>
+    <dimen name="client_user_img_gap">3dp</dimen>
+    <dimen name="client_call_right">20dp</dimen>
+    <!--线条粗细-->
+    <dimen name="client_view">0.5dp</dimen>
+    <dimen name="client_gap">5dp</dimen>
+    <dimen name="client_round_frame_height">30dp</dimen>
+    <dimen name="client_round_frame_wight">80dp</dimen>
+
+    <dimen name="client_quick_mark">20dp</dimen>
+    <dimen name="client_text_mean_size">10sp</dimen>
+    <dimen name="client_text_small_size">8sp</dimen>
+    <!--顾客性别图标大小-->
+    <dimen name="client_user_sex">12dp</dimen>
+    <dimen name="client_text_big">12sp</dimen>
+    <dimen name="client_screen_payment">12dp</dimen>
+    <dimen name="client_screen_view_gap">10dp</dimen>
+    <dimen name="client_screen_seek_gap">2dp</dimen>
+    <dimen name="client_screen_seek_revamp">80dp</dimen>
+
+
+
+
+    <!--一键开单-->
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_23">23dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_44">44dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+
+    <!--  order  文字  -->
+    <!--标题栏文字大小-->
+    <dimen name="order_title_text_size">18sp</dimen>
+    <!--副标题文字大小-->
+    <dimen name="order_subheading_text_size">15sp</dimen>
+    <!--正文文字大-->
+    <dimen name="order_main_body_text_size">12sp</dimen>
+    <!--正文文字小-->
+    <dimen name="order_main_body_little_text_size">10sp</dimen>
+
+    <!--  order  布局  -->
+    <!--标题栏高度-->
+    <dimen name="order_title_height">68dp</dimen>
+    <!--标题栏paddingTop-->
+    <dimen name="order_title_padding_top">23dp</dimen>
+</resources>

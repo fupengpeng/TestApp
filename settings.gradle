@@ -1,1 +1,1 @@
-include ':app', ':selectall'
+include ':app', ':androidtestapp', ':pulltorefresh', ':lib-zxing'

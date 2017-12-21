@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00ffffff</color>
+
+    <!-- 通用 -->
+    <!-- EditText hint字体颜色 -->
+    <color name="commonEditTextHintTextColor">#b3b3b3</color>
+    <!-- EditText字体颜色 -->
+    <color name="commonEditTextTextColor">#333333</color>
+    <!-- 分割线颜色 -->
+    <color name="commonSplitLineColor">#b3b3b3</color>
+    <!-- 按钮字体颜色 -->
+    <color name="commonButtonTextColor">#ffffff</color>
+    <!-- 标题字体颜色 -->
+    <color name="commonTitleTextColor">#ffffff</color>
+    <!-- 内容背景色 -->
+    <color name="commonContentBG">#fafafa</color>
+    
+    <!-- 侧滑菜单背景色 -->
+    <color name="bgLeftMenu">#21244c</color>
+    <!-- 侧滑菜单标题颜色 -->
+    <color name="leftMenuMainTextColor">#ffffff</color>
+    <!-- 侧滑菜单职称字体颜色 -->
+    <color name="leftMenuWorkNameTextColor">#d3aa50</color>
+    <!-- 侧滑菜单状态字体颜色 -->
+    <color name="leftMenuStateTextColor">#8e8ea0</color>
+    <!-- 侧滑菜单标题背景颜色 -->
+    <color name="bgLeftMenuTitleColor">#2e2f4d</color>
+
+    <!-- 二维码 -->
+    <color name="qr_checked_color">#ffffff</color>
+    <color name="qr_unchecked_color">#e992a1</color>
+    <color name="bg_shop_qr">#d32442</color>
+    <color name="bg_pay_qr">#fb722e</color>
+
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="timeAndPhone">#b3b3b3</color>
+    <!--背景色-->
+    <color name="view_background">#F0F0F0F0</color>
+    <!---->
+    <color name="clientUserName">#000000</color>
+    <color name="client_price">#FF0000</color>
+    <!--线条粗细-->
+    <color name="client_view">#e0e0e0e0</color>
+    <color name="color_red">#FF0000</color>
+    <color name="client_screen_popup_window_background">#df000000</color>
+    <color name="dark_gray">#F5F5F5F5</color>
+    <color name="client_details_popup_window_background">#7e000000</color>
+    <color name="client_details_original_price">#d0d0d0</color>
+    <color name="sure">#00A600</color>
+    <color name="client_building_color">#2828FF</color>
+
+
+    <!--order-->
+    <!--状态栏颜色-->
+    <color name="order_status">#000000</color>
+    <!-- 列表项按下 -->
+    <color name="list_item_pressed">#FDBD25</color>
+</resources>
