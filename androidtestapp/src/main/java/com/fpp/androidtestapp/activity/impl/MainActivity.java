@@ -1,5 +1,6 @@
 package com.fpp.androidtestapp.activity.impl;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.fpp.androidtestapp.R;
+import com.fpp.androidtestapp.activity.impl.customimageview.ImageViewActivity;
+import com.fpp.androidtestapp.activity.impl.customimageview.ImageViewTwoActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -94,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.drawerLayout)
     LinearLayout drawerLayout;
 
+    Intent intent ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,8 +127,12 @@ public class MainActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_atvt_main_one:
+                intent = new Intent(this, ImageViewActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_two:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_three:
                 break;

@@ -5,4 +5,17 @@
         <attr name="color_border" format="color" />
         <attr name="color_background" format="color" />
     </declare-styleable>
+
+
+    <!--圆形ImageView、圆角ImageView-->
+    <attr name="borderRadius" format="dimension" />
+    <attr name="imageType">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="imageType" />
+    </declare-styleable>
 </resources>
