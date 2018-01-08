@@ -22,7 +22,7 @@ import com.fpp.androidtestapp.R;
 
 /**
  * @author fupengpeng
- * @description 圆形ImageView、圆角ImageView
+ * @description 圆形ImageView、圆角ImageView--------使用时，必须设置图片
  * @data 2018/1/5 0005 13:40
  */
 public class RoundImageView extends ImageView {

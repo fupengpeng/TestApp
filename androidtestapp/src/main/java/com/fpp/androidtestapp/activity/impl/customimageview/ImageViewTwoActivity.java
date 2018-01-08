@@ -5,6 +5,12 @@ import android.os.Bundle;
 
 import com.fpp.androidtestapp.R;
 
+
+/**
+ * @description  自定义圆形ImageView，圆角ImageView.
+ * @author  fupengpeng
+ * @date  2018/1/8 0008 9:43
+ */
 public class ImageViewTwoActivity extends AppCompatActivity {
 
     @Override

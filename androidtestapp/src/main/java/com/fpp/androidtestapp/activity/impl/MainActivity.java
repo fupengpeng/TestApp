@@ -10,8 +10,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.fpp.androidtestapp.R;
+import com.fpp.androidtestapp.activity.impl.adapterview.AdapterViewActivity;
+import com.fpp.androidtestapp.activity.impl.adapterview.ExpandableListViewActivity;
+import com.fpp.androidtestapp.activity.impl.adapterview.SpinnerActivity;
 import com.fpp.androidtestapp.activity.impl.customimageview.ImageViewActivity;
 import com.fpp.androidtestapp.activity.impl.customimageview.ImageViewTwoActivity;
+import com.fpp.androidtestapp.activity.impl.recyclerview.RecyclerViewActivity;
+import com.fpp.androidtestapp.activity.impl.textview.RadioButtonActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -135,58 +140,112 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_three:
+                intent = new Intent(this, com.fpp.androidtestapp.activity.impl.imageview.ImageViewActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_four:
+                intent = new Intent(this, RadioButtonActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_five:
+                intent = new Intent(this, AdapterViewActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_six:
+                intent = new Intent(this, ExpandableListViewActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_seven:
+                intent = new Intent(this, SpinnerActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_eight:
+                intent = new Intent(this, RecyclerViewActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_nine:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_ten:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_eleven:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twelve:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_thirteen:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_fourteen:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_fifteen:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_sixteen:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_seventeen:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_eighteen:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_nineteen:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twenty:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twenty_one:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twenty_two:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twenty_three:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twenty_four:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twenty_five:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twenty_six:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twenty_seven:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twenty_eight:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twenty_nine:
+                intent = new Intent(this, ImageViewTwoActivity.class);
+                startActivity(intent);
                 break;
         }
     }

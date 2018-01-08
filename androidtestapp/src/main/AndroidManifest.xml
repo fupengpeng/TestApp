@@ -17,7 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.impl.customimageview.ImageViewActivity" />
-        <activity android:name=".activity.impl.customimageview.ImageViewTwoActivity"></activity>
+        <activity android:name=".activity.impl.customimageview.ImageViewTwoActivity" />
+        <activity android:name=".activity.impl.textview.RadioButtonActivity" />
+        <activity android:name=".activity.impl.imageview.ImageViewActivity" />
+        <activity android:name=".activity.impl.adapterview.AdapterViewActivity" />
+        <activity android:name=".activity.impl.adapterview.ExpandableListViewActivity" />
+        <activity android:name=".activity.impl.adapterview.SpinnerActivity" />
+        <activity android:name=".activity.impl.recyclerview.RecyclerViewActivity"></activity>
     </application>
 
 </manifest>

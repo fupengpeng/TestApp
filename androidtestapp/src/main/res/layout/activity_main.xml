@@ -16,7 +16,7 @@
             <Button
                 android:id="@+id/btn_atvt_main_one"
                 android:textColor="#000000"
-                android:text="two"
+                android:text="自定义圆形ImageView"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
@@ -27,7 +27,7 @@
             <Button
                 android:id="@+id/btn_atvt_main_two"
                 android:textColor="#000000"
-                android:text="two"
+                android:text="自定义ImageView-圆形、圆角"
                 android:layout_margin="5dp"
                 android:background="#ffff00"
                 android:layout_width="match_parent"
@@ -35,7 +35,7 @@
             <Button
                 android:id="@+id/btn_atvt_main_three"
                 android:textColor="#000000"
-                android:text="two"
+                android:text="关联联系人ImageView"
                 android:layout_margin="5dp"
                 android:background="#ffffff"
                 android:layout_width="match_parent"
@@ -43,7 +43,7 @@
             <Button
                 android:id="@+id/btn_atvt_main_four"
                 android:textColor="#000000"
-                android:text="two"
+                android:text="单选框、复选框、计时器、状态框等"
                 android:layout_margin="5dp"
                 android:background="#ff00ff"
                 android:layout_width="match_parent"
@@ -51,7 +51,7 @@
             <Button
                 android:id="@+id/btn_atvt_main_five"
                 android:textColor="#000000"
-                android:text="two"
+                android:text="自动输入框"
                 android:layout_margin="5dp"
 
                 android:background="#ffaaaa"
@@ -60,7 +60,7 @@
             <Button
                 android:id="@+id/btn_atvt_main_six"
                 android:textColor="#000000"
-                android:text="two"
+                android:text="分组listview"
                 android:layout_margin="5dp"
                 android:background="#ccffff"
                 android:layout_width="match_parent"
@@ -68,7 +68,7 @@
             <Button
                 android:id="@+id/btn_atvt_main_seven"
                 android:textColor="#000000"
-                android:text="two"
+                android:text="下拉选择框"
                 android:layout_margin="5dp"
 
                 android:background="#ffcccc"
@@ -77,7 +77,7 @@
             <Button
                 android:id="@+id/btn_atvt_main_eight"
                 android:textColor="#000000"
-                android:text="two"
+                android:text="recyclerview"
                 android:layout_margin="5dp"
                 android:background="#00ffff"
                 android:layout_width="match_parent"

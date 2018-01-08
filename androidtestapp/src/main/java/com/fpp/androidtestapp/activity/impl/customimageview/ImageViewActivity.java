@@ -6,6 +6,11 @@ import android.os.Bundle;
 import com.fpp.androidtestapp.R;
 import com.fpp.androidtestapp.customerview.ZQImageViewRoundOval;
 
+/**
+ * @description  自定义圆形ImageView应用
+ * @author  fupengpeng
+ * @date  2018/1/8 0008 9:42
+ */
 public class ImageViewActivity extends AppCompatActivity {
 
 
