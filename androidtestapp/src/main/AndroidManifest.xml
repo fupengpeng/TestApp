@@ -23,7 +23,8 @@
         <activity android:name=".activity.impl.adapterview.AdapterViewActivity" />
         <activity android:name=".activity.impl.adapterview.ExpandableListViewActivity" />
         <activity android:name=".activity.impl.adapterview.SpinnerActivity" />
-        <activity android:name=".activity.impl.recyclerview.RecyclerViewActivity"></activity>
+        <activity android:name=".activity.impl.recyclerview.RecyclerViewActivity" />
+        <activity android:name=".activity.impl.progressbar.PargressBarActivity"></activity>
     </application>
 
 </manifest>
