@@ -6,6 +6,8 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import com.fpp.androidtestapp.application.MyApplication;
+
 /**
  * UI工具类
  */
@@ -169,6 +171,9 @@ public class UIUtils {
 		InputMethodManager imm = (InputMethodManager) context
 				.getSystemService(Context.INPUT_METHOD_SERVICE);
 		imm.showSoftInput(view, InputMethodManager.SHOW_FORCED);
-	}	
+	}
 
+	public static Context getContext() {
+		return MyApplication.getInstance();
+	}
 }

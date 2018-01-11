@@ -15,4 +15,34 @@
         android:text="偶像"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:text="拍照"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:id="@+id/takePhone"
+        />
+    <Button
+        android:text="相机"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:id="@+id/camera"
+        />
+    <Button
+        android:id="@+id/choosePhone"
+        android:text="相册选择"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_activity_image_view"
+        android:src="@drawable/shilipic"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
 </LinearLayout>
