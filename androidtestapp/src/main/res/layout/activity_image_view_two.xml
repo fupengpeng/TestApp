@@ -7,6 +7,7 @@
     android:orientation="vertical" >
 
     <com.fpp.androidtestapp.customerview.RoundImageView
+        android:id="@+id/take_photo"
         android:layout_width="200dip"
         android:layout_height="200dip"
         android:src="@drawable/shilipic"
@@ -14,6 +15,7 @@
         beyole:imageType="round" />
 
     <com.fpp.androidtestapp.customerview.RoundImageView
+        android:id="@+id/choose_photo"
         android:layout_width="200dip"
         android:layout_height="200dip"
         android:src="@drawable/shilipic"

@@ -23,13 +23,14 @@
         android:layout_margin="10dp"
         android:id="@+id/takePhone"
         />
+
     <Button
-        android:text="相机"
+        android:id="@+id/camera"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_margin="10dp"
-        android:id="@+id/camera"
-        />
+        android:text="相机" />
+
     <Button
         android:id="@+id/choosePhone"
         android:text="相册选择"
@@ -40,9 +41,9 @@
 
     <ImageView
         android:id="@+id/iv_activity_image_view"
-        android:src="@drawable/shilipic"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center"
         android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/shilipic" />
 </LinearLayout>

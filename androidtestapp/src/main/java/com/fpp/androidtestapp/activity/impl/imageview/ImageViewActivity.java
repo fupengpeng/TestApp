@@ -1,9 +1,11 @@
 package com.fpp.androidtestapp.activity.impl.imageview;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -15,11 +17,13 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -29,8 +33,11 @@ import android.widget.QuickContactBadge;
 import android.widget.Toast;
 
 import com.fpp.androidtestapp.R;
+import com.fpp.androidtestapp.util.AppUtils;
+import com.fpp.androidtestapp.util.LogUtils;
 import com.fpp.androidtestapp.util.ToastUtils;
 import com.fpp.androidtestapp.util.UIUtils;
+import com.uuzuche.lib_zxing.activity.CodeUtils;
 
 import java.io.File;
 import java.io.FileDescriptor;
@@ -57,19 +64,32 @@ public class ImageViewActivity extends AppCompatActivity {
     @BindView(R.id.choosePhone)
     Button choosePhone;
 
-
-    private static final int CROP_PHOTO = 2;
-    private static final int REQUEST_CODE_PICK_IMAGE = 3;
-    private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 6;
-    private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE2 = 7;
     @BindView(R.id.camera)
     Button camera;
-    private File output;
-    private Uri imageUri;
 
+    /**
+     * 扫描二维码返回结果码
+     */
+    private static final int REQUEST_CODE = 10001;
 
-    private static final int NEED_CAMERA = 200;
-    private static final int RESULT_PICK = 201;
+    /**
+     * 拍照权限申请码
+     */
+    private final int CAMERA_PHOTO_REQUEST_CODE = 9001;
+    /**
+     * 相册权限申请码(存储)
+     */
+    private final int PHOTO_ALBUM_REQUEST_CODE = 9002;
+    /**
+     * 相机权限申请码
+     */
+    private final int CAMERA_REQUEST_CODE = 9003;
+
+    /**
+     * 图片处理响应码
+     */
+    private final int PICTURE_PROCESSING_REQUEST_CODE = 9004;
+    Intent intent;
 
 
     @Override
@@ -90,20 +110,18 @@ public class ImageViewActivity extends AppCompatActivity {
 
     }
 
-    @OnClick(R.id.camera)
-    public void onViewClicked() {
 
-
-    }
-
-    @OnClick({R.id.takePhone, R.id.choosePhone, R.id.iv_activity_image_view})
+    @OnClick({R.id.takePhone, R.id.choosePhone, R.id.iv_activity_image_view,R.id.camera})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.camera:
+
+                break;
             case R.id.takePhone:
-                takePhone();
+
                 break;
             case R.id.choosePhone:
-                choosePhone();
+
                 break;
             case R.id.iv_activity_image_view:
 
@@ -120,29 +138,7 @@ public class ImageViewActivity extends AppCompatActivity {
                     @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
                     public void onClick(View v) {
-//                        // 判断有无存储空间权限
-//                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !AppUtils.hasWriteExternalStoragePermission(ImageViewActivity.this, true)) {
-//                            // 申请权限
-//                            ImageViewActivity.this.requestPermissions(
-//                                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1);
-//                            // 解释权限
-//                            if (ImageViewActivity.this.shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-//                                ToastUtils.showLong(ImageViewActivity.this, Consts.WaitDialogMessage.SET_EXTERNAL_STORAGE_PERMISSION);
-//                            }
-//                            return;
-//                        }
-//                        // 拍照
-//                        //takePhoto();
-////                        requestCameraPermission();
-                        //检测是否有相机和读写文件权限
-                        if (ContextCompat.checkSelfPermission(UIUtils.getContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
-                                ||
-                                ContextCompat.checkSelfPermission(UIUtils.getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                            ImageViewActivity.this.requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, NEED_CAMERA);
-                        } else {
-                            //打开相机获取图片
-                            startCamera();
-                        }
+                        checkSelfPermission(CAMERA_PHOTO_REQUEST_CODE);
                         dialog.dismiss();
                     }
                 });
@@ -151,287 +147,275 @@ public class ImageViewActivity extends AppCompatActivity {
                 llSelectPhotoAlbum.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-//                        // 判断有无存储空间权限
-//                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !AppUtils.hasWriteExternalStoragePermission(ImageViewActivity.this, true)) {
-//                            // 申请权限
-//                            ImageViewActivity.this.requestPermissions(
-//                                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-//                            // 解释权限
-//                            if (ImageViewActivity.this.shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-//                                ToastUtils.showLong(ImageViewActivity.this, Consts.WaitDialogMessage.SET_EXTERNAL_STORAGE_PERMISSION);
-//                            }
-//                            return;
-//                        }
-//                        // 从相册中选择
-//                        // TODO: 2018/1/11 0011  相册
-////                selectFromAlbum();
-
-                        if (ContextCompat.checkSelfPermission(UIUtils.getContext(), Manifest.permission.READ_EXTERNAL_STORAGE)
-                                != PackageManager.PERMISSION_GRANTED) {
-                            ImageViewActivity.this.requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, RESULT_PICK);
-                        } else {
-                            //选择图片
-                            startPickPhoto();
-                        }
+                        checkSelfPermission(PHOTO_ALBUM_REQUEST_CODE);
                         dialog.dismiss();
                     }
                 });
                 window.setContentView(dialogView);
-
                 break;
         }
     }
 
-    private void startPickPhoto() {
-        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(Intent.createChooser(intent, "请选择图片"), RESULT_PICK);
 
-    }
-
-    File newFile;
-    Uri contentUri;
-
-    private void startCamera() {
-        File imagePath = new File(Environment.getExternalStorageDirectory(), "images");
-        if (!imagePath.exists()) imagePath.mkdirs();
-        newFile = new File(imagePath, "point_image.jpg");
-
-        //第二参数是在manifest.xml定义 provider的authorities属性
-        contentUri = FileProvider.getUriForFile(UIUtils.getContext(), "com.example.administrator.im_demo.fileprovider", newFile);
-
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        //兼容版本处理，因为 intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION) 只在5.0以上的版本有效
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            ClipData clip = ClipData.newUri(ImageViewActivity.this.getContentResolver(), "A photo", contentUri);
-            intent.setClipData(clip);
-            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        } else {
-            List<ResolveInfo> resInfoList = ImageViewActivity.this.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
-            for (ResolveInfo resolveInfo : resInfoList) {
-                String packageName = resolveInfo.activityInfo.packageName;
-                ImageViewActivity.this.grantUriPermission(packageName, contentUri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-            }
-        }
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, contentUri);
-        startActivityForResult(intent, NEED_CAMERA);
-
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                                           int[] grantResults) {
-        switch (requestCode) {
-            case NEED_CAMERA:
-                // 如果权限被拒绝，grantResults 为空
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //打开相机获取图片
-                    startCamera();
-                } else {
-                    Toast.makeText(UIUtils.getContext(), "需要相机和读写文件权限", Toast.LENGTH_SHORT).show();
+    /**
+     * 检测用户是否拥有对应的权限
+     * @param tag  调用方法标识
+     */
+    @TargetApi(Build.VERSION_CODES.M)
+    public void checkSelfPermission(int tag){
+        switch (tag){
+            case CAMERA_PHOTO_REQUEST_CODE:
+                //判断是否有相机和存储权限
+                if ((ContextCompat.checkSelfPermission(ImageViewActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)||
+                        (ContextCompat.checkSelfPermission(ImageViewActivity.this,Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)||
+                        (ContextCompat.checkSelfPermission(ImageViewActivity.this,Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)){
+                    //如果没有授权，则请求授权
+                    ActivityCompat.requestPermissions(ImageViewActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, CAMERA_PHOTO_REQUEST_CODE);
+                }else {
+                    // TODO: 2018/1/12 0012 相机拍照 ----- 判断系统版本决定是否拍照（涉及Android7.0存储空间问题）
+                    android7(CAMERA_PHOTO_REQUEST_CODE);
                 }
                 break;
-            case RESULT_PICK:
-                // 如果权限被拒绝，grantResults 为空
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //选择图片
-                    startPickPhoto();
-                } else {
-                    Toast.makeText(UIUtils.getContext(), "需要读取权限", Toast.LENGTH_SHORT).show();
+            case PHOTO_ALBUM_REQUEST_CODE:
+
+                // 判断有无存储空间权限
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !AppUtils.hasWriteExternalStoragePermission(ImageViewActivity.this, true)) {
+                    // 申请权限
+                    ImageViewActivity.this.requestPermissions(
+                            new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, PHOTO_ALBUM_REQUEST_CODE);
+
+                }else {
+                    //有存储空间权限
+                    // TODO: 2018/1/12 0012 相册 ----- 判断系统版本决定是否拍照（涉及Android7.0存储空间问题）
+                    //从图库中获取资源
+                    // Intent.ACTION_PICK 进入图库获取照片意图
+//                    intent = new Intent(Intent.ACTION_PICK);
+//                    android7(PHOTO_ALBUM_REQUEST_CODE);
+//                    startActivityForResult(intent, PHOTO_ALBUM_REQUEST_CODE);
+
+                    //从图库中获取资源
+                    // Intent.ACTION_PICK 进入图库获取照片意图
+                    Intent intent = new Intent(Intent.ACTION_PICK);
+                    //设置类型
+                    intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+                    startActivityForResult(intent, 3);
                 }
                 break;
 
-        }
-    }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (requestCode) {
-            case NEED_CAMERA:
-                ContentResolver contentProvider = ImageViewActivity.this.getContentResolver();
-                ParcelFileDescriptor mInputPFD;
-                try {
-                    //获取contentProvider图片
-                    mInputPFD = contentProvider.openFileDescriptor(contentUri, "r");
-                    FileDescriptor fileDescriptor = mInputPFD.getFileDescriptor();
-                    ivActivityImageView.setImageBitmap(BitmapFactory.decodeFileDescriptor(fileDescriptor));
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-                break;
-            //选择照片
-            case RESULT_PICK:
-                try {
-                    Uri uri = data.getData();
-                    //打开圆形裁剪图界面
-//                    String path = Utils.getRealFilePathFromUri( ImageViewActivity.this.getApplicationContext(), uri);
-//                    Bitmap bitmaps = BitmapUtil.decodeSampledBitmap(path, 720, 1280);
-                    Bitmap bit = BitmapFactory.decodeStream(getContentResolver().openInputStream(uri));
-                    ivActivityImageView.setImageBitmap(bit);
-                    /**
-                     * 请求网络，将图片上传到服务器
-                     */
-                    //upLoadImg(path);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                break;
-        }
-    }
-
-    public void takePhone() {
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    MY_PERMISSIONS_REQUEST_CALL_PHONE2);
-
-        } else {
-            takePhoto();
-        }
-
-    }
-
-    public void choosePhone() {
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    MY_PERMISSIONS_REQUEST_CALL_PHONE2);
-
-        } else {
-            choosePhoto();
         }
     }
 
     /**
-     * 拍照
+     * 创建的图片保存文件
      */
-    void takePhoto() {
-        /**
-         * 最后一个参数是文件夹的名称，可以随便起
-         */
-        File file = new File(Environment.getExternalStorageDirectory(), "拍照");
-        if (!file.exists()) {
-            file.mkdir();
-        }
-        /**
-         * 这里将时间作为不同照片的名称
-         */
-        output = new File(file, System.currentTimeMillis() + ".jpg");
+    File filep;
+    /**
+     * 图片保存路径
+     */
+    Uri imageUri;
+    // 处理后图片（用于显示和上传）
+    Bitmap bitmap;
 
-        /**
-         * 如果该文件夹已经存在，则删除它，否则创建一个
-         */
-        try {
-            if (output.exists()) {
-                output.delete();
-            }
-            output.createNewFile();
-        } catch (Exception e) {
-            e.printStackTrace();
+    /**
+     * android 7.0 文件路径处理
+     */
+    public void android7(int tag){
+        //获取系統版本
+        int currentapiVersion = Build.VERSION.SDK_INT;
+        switch (tag){
+            case CAMERA_PHOTO_REQUEST_CODE:
+                intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                if (hasSdcard()) {
+                    filep = new File(tempPhotoPath);
+                    LogUtils.e("file = " + filep.toURI().toString());      //  file:/storage/emulated/0/Pictures/tks_temp_photo.jpeg
+                    // 判断系统版本，根据是否大于24决定uri创建方式
+                    if (currentapiVersion < 24) {
+                        // 从文件中创建uri
+                        imageUri = Uri.fromFile(filep);
+                        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+                    } else {
+                        //兼容android7.0 使用共享文件的形式
+                        ContentValues contentValues = new ContentValues(1);
+                        contentValues.put(MediaStore.Images.Media.DATA, filep.getAbsolutePath());
+                        //检查是否有存储权限，以免崩溃
+                        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                                != PackageManager.PERMISSION_GRANTED) {
+                            //申请WRITE_EXTERNAL_STORAGE权限
+                            Toast.makeText(this, "请开启存储权限", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                        //intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                        imageUri = FileProvider.getUriForFile(this, "com.fpp.androidtestapp.fileProvider", filep);
+                        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+                    }
+                    LogUtils.e("imageUri = " + imageUri.toString());
+                }
+                startActivityForResult(intent, CAMERA_PHOTO_REQUEST_CODE);
+                break;
+
+            case PHOTO_ALBUM_REQUEST_CODE:
+
+                break;
         }
-        /**
-         * 隐式打开拍照的Activity，并且传入CROP_PHOTO常量作为拍照结束后回调的标志
-         */
-        imageUri = Uri.fromFile(output);
-        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-        startActivityForResult(intent, CROP_PHOTO);
+
+
 
     }
 
     /**
-     * 从相册选取图片
+     * 拍照临时图片
      */
-    void choosePhoto() {
-        /**
-         * 打开选择图片的界面
-         */
-        Intent intent = new Intent(Intent.ACTION_PICK);
-        intent.setType("image/*");//相片类型
-        startActivityForResult(intent, REQUEST_CODE_PICK_IMAGE);
+    protected static final String tempPhotoPath = Environment.getExternalStoragePublicDirectory(
+            Environment.DIRECTORY_PICTURES) + File.separator + "tks_temp_photo.jpeg";
+    /**
+     * 裁剪临时图片
+     */
+    protected static final String tempCropPhotoPath = Environment.getExternalStoragePublicDirectory(
+            Environment.DIRECTORY_PICTURES) + File.separator + "tks_temp_crop_photo.jpeg";
+    /**
+     * 判断sdcard是否被挂载
+     */
+    public static boolean hasSdcard() {
+        return Environment.getExternalStorageState().equals(
+                Environment.MEDIA_MOUNTED);
+    }
+
+    /**
+     * 权限申请返回结果
+     *
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode){
+            case CAMERA_PHOTO_REQUEST_CODE:
+                // TODO: 2018/1/12 0012 相机拍照 ----- 判断系统版本决定是否拍照（涉及Android7.0存储空间问题）
+                android7(CAMERA_PHOTO_REQUEST_CODE);
+                break;
+            case PHOTO_ALBUM_REQUEST_CODE:
+                // TODO: 2018/1/12 0012 相册 ----- 判断系统版本决定是否拍照（涉及Android7.0存储空间问题）
+                //从图库中获取资源
+                // Intent.ACTION_PICK 进入图库获取照片意图
+//                intent = new Intent(Intent.ACTION_PICK);
+//                android7(PHOTO_ALBUM_REQUEST_CODE);
+//                startActivityForResult(intent, PHOTO_ALBUM_REQUEST_CODE);
+                //从图库中获取资源
+                // Intent.ACTION_PICK 进入图库获取照片意图
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                //设置类型
+                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+                startActivityForResult(intent, PHOTO_ALBUM_REQUEST_CODE);
+                break;
+
+        }
+
+    }
+
+    /**
+     * 调用系统应用返回结果
+     *
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        LogUtils.e("request = " + requestCode + "   result = " + resultCode);
+        Bundle bundle;
+        if (resultCode == RESULT_OK) {
+            switch (requestCode){
+                case CAMERA_PHOTO_REQUEST_CODE:
+                    // TODO: 2018/1/12 0012 相机拍照返回结果
+                    Uri mImageCaptureUri;
+                    File filePhoto = new File(tempPhotoPath);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        //兼容android7.0 使用共享文件的形式
+                        ContentValues contentValues = new ContentValues(1);
+                        contentValues.put(MediaStore.Images.Media.DATA, filePhoto.getAbsolutePath());
+                        //检查是否有存储权限，以免崩溃
+                        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                                != PackageManager.PERMISSION_GRANTED) {
+                            //申请WRITE_EXTERNAL_STORAGE权限
+                            Toast.makeText(this, "请开启存储权限", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                        mImageCaptureUri = FileProvider.getUriForFile(this, "com.fpp.androidtestapp.fileProvider", filePhoto);
+                    } else {
+                        mImageCaptureUri = Uri.fromFile(filePhoto);
+                    }
+                    pictureProcessing(mImageCaptureUri);
+                    break;
+                case PHOTO_ALBUM_REQUEST_CODE:
+                    // TODO: 2018/1/12 0012 相册获取图片返回结果
+
+                    pictureProcessing(imageUri);
+                    break;
+
+                case PICTURE_PROCESSING_REQUEST_CODE:
+                    //图片处理返回结果
+                    if (resultCode == RESULT_OK) {
+                        try {
+                            filep = new File(tempCropPhotoPath);
+                            bitmap = BitmapFactory.decodeFile(filep.getAbsolutePath());
+                            // 设置裁剪后的图片
+                            ivActivityImageView.setImageBitmap(bitmap);
+                        } catch (Exception e) {
+
+                        }
+                    }
+                    break;
+            }
+        }
+    }
+
+    /**
+     * 图片处理
+     *
+     * @param uri
+     */
+    public void pictureProcessing(Uri uri) {
+        LogUtils.e("uri = " + uri.toString());
+        //使用意图剪切照片
+        Intent intent = new Intent();
+        //设置要剪切的资源文件和类型
+        intent.setDataAndType(uri, "image/*");
+        //设置剪切
+        intent.setAction("com.android.camera.action.CROP");
+        //开启剪切
+        intent.putExtra("crop", "true");
+        //设置 裁剪框比例
+        intent.putExtra("aspectX", 1);
+        intent.putExtra("aspectY", 1);
+        //设置裁剪后输出的照片大小
+        intent.putExtra("outputX", 600);
+        intent.putExtra("outputY", 600);
+        File file = new File(tempCropPhotoPath);
+        LogUtils.e("tempCropPhotoPath = " + tempCropPhotoPath);
+        LogUtils.e("urifile = " + file.toURI().toString());
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
+        intent.putExtra("return-data", false);
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+        intent.putExtra("noFaceDetection", true);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        }
+        //启动
+        startActivityForResult(intent, PICTURE_PROCESSING_REQUEST_CODE);
 
     }
 
 
 
-//    public void onActivityResult(int req, int res, Intent data) {
-//        switch (req) {
-//            /**
-//             * 拍照的请求标志
-//             */
-//            case CROP_PHOTO:
-//                if (res == RESULT_OK) {
-//                    try {
-//                        /**
-//                         * 该uri就是照片文件夹对应的uri
-//                         */
-//                        Bitmap bit = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
-//                        ivActivityImageView.setImageBitmap(bit);
-//                    } catch (Exception e) {
-//                        Toast.makeText(this, "程序崩溃", Toast.LENGTH_SHORT).show();
-//                    }
-//                } else {
-//                    Log.i("tag", "失败");
-//                }
-//
-//                break;
-//            /**
-//             * 从相册中选取图片的请求标志
-//             */
-//
-//            case REQUEST_CODE_PICK_IMAGE:
-//                if (res == RESULT_OK) {
-//                    try {
-//                        /**
-//                         * 该uri是上一个Activity返回的
-//                         */
-//                        Uri uri = data.getData();
-//                        Bitmap bit = BitmapFactory.decodeStream(getContentResolver().openInputStream(uri));
-//                        ivActivityImageView.setImageBitmap(bit);
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                        Log.d("tag", e.getMessage());
-//                        Toast.makeText(this, "程序崩溃", Toast.LENGTH_SHORT).show();
-//                    }
-//                } else {
-//                    Log.i("liang", "失败");
-//                }
-//
-//                break;
-//
-//            default:
-//                break;
-//        }
-//    }
-//
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-//
-//        if (requestCode == MY_PERMISSIONS_REQUEST_CALL_PHONE) {
-//            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                takePhoto();
-//            } else {
-//                // Permission Denied
-//                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//
-//
-//        if (requestCode == MY_PERMISSIONS_REQUEST_CALL_PHONE2) {
-//            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                choosePhoto();
-//            } else {
-//                // Permission Denied
-//                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//    }
+
+
+
+
+
+
 }
