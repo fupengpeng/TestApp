@@ -58,7 +58,19 @@
 
     <!--order-->
     <!--状态栏颜色-->
-    <color name="order_status">#000000</color>
+    <!--状态栏颜色-->
+    <color name="black">#000000</color>
     <!-- 列表项按下 -->
     <color name="list_item_pressed">#FDBD25</color>
+    <!--分割线颜色-->
+    <color name="cut_off_rule">#f0f0f0</color>
+    <!--客户信息背景色-->
+    <color name="user_msg_bg">#f9f9f9</color>
+    <!--背景色-->
+    <color name="white">#ffffff</color>
+    <color name="dark_green">#009900</color>
+    <color name="red">#ff0000</color>
+    <color name="yellow">#FFCC00</color>
+    <color name="order_status">#ffaaff</color>
+
 </resources>

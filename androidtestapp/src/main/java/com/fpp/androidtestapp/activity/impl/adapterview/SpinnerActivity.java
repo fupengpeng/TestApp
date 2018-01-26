@@ -7,6 +7,9 @@ import android.widget.Spinner;
 
 import com.fpp.androidtestapp.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -29,8 +32,12 @@ public class SpinnerActivity extends AppCompatActivity {
     private void initView() {
 
         String[] arr = {"唐僧", "孙悟空", "猪八戒", "沙僧"};
+        List<String> name = new ArrayList<String>();
+        for (int i = 0; i < 5 ; i++) {
+            name.add("名称" + i);
+        }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, arr);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, name);
 
         spinner.setAdapter(adapter);
 

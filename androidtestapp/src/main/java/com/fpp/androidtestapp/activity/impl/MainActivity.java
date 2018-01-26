@@ -15,8 +15,11 @@ import com.fpp.androidtestapp.activity.impl.adapterview.ExpandableListViewActivi
 import com.fpp.androidtestapp.activity.impl.adapterview.SpinnerActivity;
 import com.fpp.androidtestapp.activity.impl.customimageview.ImageViewActivity;
 import com.fpp.androidtestapp.activity.impl.customimageview.ImageViewTwoActivity;
+import com.fpp.androidtestapp.activity.impl.datetimepicker.DateTimePackerActivity;
+import com.fpp.androidtestapp.activity.impl.numberpicker.NumberPickerActivity;
 import com.fpp.androidtestapp.activity.impl.recyclerview.RecyclerViewActivity;
 import com.fpp.androidtestapp.activity.impl.textview.RadioButtonActivity;
+import com.fpp.androidtestapp.activity.impl.wheelview.WheelViewActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -164,15 +167,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_nine:
-                intent = new Intent(this, ImageViewTwoActivity.class);
+                intent = new Intent(this, DateTimePackerActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_ten:
-                intent = new Intent(this, ImageViewTwoActivity.class);
+                intent = new Intent(this, WheelViewActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_eleven:
-                intent = new Intent(this, ImageViewTwoActivity.class);
+                intent = new Intent(this, NumberPickerActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twelve:

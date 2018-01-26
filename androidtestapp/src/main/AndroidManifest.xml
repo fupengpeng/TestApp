@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fpp.androidtestapp">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -27,8 +27,7 @@
         <activity android:name=".activity.impl.adapterview.ExpandableListViewActivity" />
         <activity android:name=".activity.impl.adapterview.SpinnerActivity" />
         <activity android:name=".activity.impl.recyclerview.RecyclerViewActivity" />
-        <activity android:name=".activity.impl.progressbar.PargressBarActivity"></activity>
-
+        <activity android:name=".activity.impl.progressbar.PargressBarActivity" />
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->
         <provider
@@ -43,7 +42,9 @@
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->
 
-
+        <activity android:name=".activity.impl.datetimepicker.DateTimePackerActivity" />
+        <activity android:name=".activity.impl.numberpicker.NumberPickerActivity" />
+        <activity android:name=".activity.impl.wheelview.WheelViewActivity"></activity>
     </application>
 
 </manifest>

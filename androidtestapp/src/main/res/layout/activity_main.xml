@@ -6,210 +6,241 @@
     android:layout_height="match_parent">
 
     <include layout="@layout/title_activity"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <Button
                 android:id="@+id/btn_atvt_main_one"
-                android:textColor="#000000"
-                android:text="自定义圆形ImageView"
-                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
                 android:background="#aaff00"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="自定义圆形ImageView"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_two"
-                android:textColor="#000000"
-                android:text="自定义ImageView-圆形、圆角"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#ffff00"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="自定义ImageView-圆形、圆角"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_three"
-                android:textColor="#000000"
-                android:text="关联联系人ImageView"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#ffffff"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="关联联系人ImageView"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_four"
-                android:textColor="#000000"
-                android:text="单选框、复选框、计时器、状态框等"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#ff00ff"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="单选框、复选框、计时器、状态框等"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_five"
-                android:textColor="#000000"
-                android:text="自动输入框"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
 
                 android:background="#ffaaaa"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="自动输入框"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_six"
-                android:textColor="#000000"
-                android:text="分组listview"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#ccffff"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="分组listview"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_seven"
-                android:textColor="#000000"
-                android:text="下拉选择框"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
 
                 android:background="#ffcccc"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="下拉选择框"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_eight"
-                android:textColor="#000000"
-                android:text="recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#00ffff"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="recyclerview"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_nine"
-                android:textColor="#7CFC00"
-                android:text="two"
-                android:background="#FF6A6A"
-                android:layout_margin="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:layout_height="45dp"
+                android:layout_margin="5dp"
+                android:background="#FF6A6A"
+                android:text="日期时间选择"
+                android:textColor="#7CFC00" />
+
             <Button
                 android:id="@+id/btn_atvt_main_ten"
-                android:textColor="#000000"
-                android:text="two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#BBFFFF"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="WheelView"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_eleven"
-                android:textColor="#000000"
-                android:text="two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#00F5FF"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="NumberPicker"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_twelve"
-                android:textColor="#000000"
-                android:text="two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#7FFFD4"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="two"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_thirteen"
-                android:textColor="#000000"
-                android:text="two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#C1FFC1"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="two"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_fourteen"
-                android:textColor="#000000"
-                android:text="two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#54FF9F"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="two"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_fifteen"
-                android:textColor="#000000"
-                android:text="two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#00FF7F"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="two"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_sixteen"
-                android:textColor="#000000"
-                android:text="two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#00FF00"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="two"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_seventeen"
-                android:textColor="#000000"
-                android:text="two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#C0FF3E"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="two"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_eighteen"
-                android:textColor="#000000"
-                android:text="two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#FFF68F"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="two"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_nineteen"
-                android:textColor="#000000"
-                android:text="two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#FFFFE0"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="two"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_twenty"
-                android:textColor="#000000"
-                android:text="two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#FFFF00"
-                android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:text="two"
+                android:textColor="#000000" />
+
             <Button
                 android:id="@+id/btn_atvt_main_twenty_one"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
+
             <Button
                 android:id="@+id/btn_atvt_main_twenty_two"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
+
             <Button
                 android:id="@+id/btn_atvt_main_twenty_three"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
+
             <Button
                 android:id="@+id/btn_atvt_main_twenty_four"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
+
             <Button
                 android:id="@+id/btn_atvt_main_twenty_five"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
+
             <Button
                 android:id="@+id/btn_atvt_main_twenty_six"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
+
             <Button
                 android:id="@+id/btn_atvt_main_twenty_seven"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
+
             <Button
                 android:id="@+id/btn_atvt_main_twenty_eight"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
+
             <Button
                 android:id="@+id/btn_atvt_main_twenty_nine"
                 android:layout_width="match_parent"
