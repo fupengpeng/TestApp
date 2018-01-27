@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical">
 
     <com.fpp.androidtestapp.activity.impl.wheelview.WheelView
         android:id="@+id/main_wv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content" />
 
 
     <Button
@@ -18,7 +18,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:background="@drawable/selects"
         android:text="show WheelView in Dialog!"
-        />
+        android:textColor="#000000" />
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selects"
+        android:button="@null"
+        android:checked="true" />
+
 
 </LinearLayout>
