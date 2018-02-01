@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/llLayout"
+        android:orientation="horizontal"
+        android:layout_margin="2dp"
+        android:background="@color/colorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+<ImageView
+    android:layout_width="100dp"
+    android:layout_height="150dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <TextView
+            android:id="@+id/all_products_one_name"
+            android:textSize="20dp"
+            android:textColor="@color/colorBlack"
+            android:text="福建省快递费司法解释会计核算方式 的阿达 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--<TextView-->
+            <!--android:id="@+id/all_products_salesVolume"-->
+            <!--android:text="泛海控股很快就会减少"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--<TextView-->
+            <!--android:textColor="@color/pitch_on_textColor"-->
+            <!--android:layout_above="@id/all_products_salesVolume"-->
+            <!--android:text="红日oh特色哦i电视剧还是进口后"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="35dp">
+
+            <!--<TextView-->
+            <!--android:id="@+id/tvContent"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="content"-->
+            <!--android:textSize="30sp" />-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                >
+                <TextView
+                    android:id="@+id/all_products_sales_price"
+                    android:text="￥18.00"
+                    android:textColor="#ff00aa"
+                    android:layout_marginBottom="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/all_products_sales_volume"
+                    android:text="销量:100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+            <TextView
+                android:id="@+id/tvDelete"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="#D3D3D3"
+                android:textColor="#ff00aa"
+                android:gravity="center"
+                android:text="收藏" />
+
+            <TextView
+                android:id="@+id/tvTop"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="#FF0000"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:text="  加入  购物车" />
+
+    </LinearLayout>
+</LinearLayout>

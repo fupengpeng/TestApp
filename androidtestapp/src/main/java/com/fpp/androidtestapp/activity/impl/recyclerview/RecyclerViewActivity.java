@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fpp.androidtestapp.R;
 
@@ -29,10 +30,26 @@ public class RecyclerViewActivity extends AppCompatActivity {
     TextView tvTitleActivityTitle;
     @BindView(R.id.iv_title_activity_right)
     ImageView ivTitleActivityRight;
-    @BindView(R.id.recyclerview)
-    RecyclerView recyclerview;
+    @BindView(R.id.recyclerview01)
+    RecyclerView recyclerview01;
+    @BindView(R.id.recyclerview02)
+    RecyclerView recyclerview02;
+    @BindView(R.id.recyclerview03)
+    RecyclerView recyclerview03;
+    @BindView(R.id.recyclerview04)
+    RecyclerView recyclerview04;
+    @BindView(R.id.recyclerview05)
+    LeftSwipeMenuRecyclerView recyclerview05;
+    @BindView(R.id.recyclerview06)
+    RecyclerView recyclerview06;
+    @BindView(R.id.recyclerview07)
+    RecyclerView recyclerview07;
     private List<String> mDatas;
     private HomeAdapter mAdapter;
+
+    private MyAdapter adapter;
+
+    private RecyclerView.LayoutManager mLayoutManager;
 
 
     @Override
@@ -43,24 +60,95 @@ public class RecyclerViewActivity extends AppCompatActivity {
         tvTitleActivityTitle.setText("RecyclerView");
 
         initData();
+
+        /*
+
+        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        // 设置布局管理器
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        // 设置adapter
+        mRecyclerView.setAdapter(mAdapter);
+        // 设置Item添加和移除的动画
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        // 设置Item之间间隔样式
+        mRecyclerView.addItemDecoration(mDividerItemDecoration);
+
+        */
+
+
         //效果一
-//        recyclerview.setLayoutManager(new LinearLayoutManager(this));
-//        recyclerview.setAdapter(mAdapter = new HomeAdapter());
-//        recyclerview.addItemDecoration(new DividerItemDecoration(this,
-//                DividerItemDecoration.VERTICAL_LIST));
+        initView01();
+
 
         //效果二
-//        recyclerview.setLayoutManager(new GridLayoutManager(this,4));
-//        recyclerview.setAdapter(mAdapter = new HomeAdapter());
-//        recyclerview.addItemDecoration(new DividerGridItemDecoration(this));
+        initView02();
 
         //效果三
-        recyclerview.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
-//        recyclerview.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.HORIZONTAL));
-        recyclerview.setAdapter(mAdapter = new HomeAdapter());
-        recyclerview.addItemDecoration(new DividerGridItemDecoration(this));
+        initView03();
+
+        //效果四
+        initView04();
+
+        //效果五
+        initView05();
+
+        //效果六
+        initView06();
 
 
+        //效果七
+        initView07();
+
+
+    }
+
+    private void initView05() {
+        /**
+         * 商品显示列表格式
+         */
+        boolean commodity_list = false;
+        List<Message> messageList = new ArrayList<Message>();
+        for (int i = 0; i < 20; i++) {
+            Message message = new Message();
+            message.setId(i);
+            message.setFid("fid" + i);
+            message.setName("name" + i);
+            messageList.add(message);
+        }
+        LeftSwipeMenuRecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false);
+        recyclerview05.setLayoutManager(layoutManager);
+
+        RVAdapter adapters = new RVAdapter(this, messageList, commodity_list);
+        recyclerview05.setAdapter(adapters);
+    }
+
+    private void initView04() {
+        recyclerview04.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
+//        recyclerview03.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.HORIZONTAL));
+        recyclerview04.setAdapter(mAdapter = new HomeAdapter());
+        recyclerview04.addItemDecoration(new DividerGridItemDecoration(this));
+    }
+
+    private void initView03() {
+        recyclerview03.setLayoutManager(new GridLayoutManager(this, 4));
+        recyclerview03.setAdapter(mAdapter = new HomeAdapter());
+        recyclerview03.addItemDecoration(new DividerGridItemDecoration(this));
+    }
+
+    private void initView02() {
+        recyclerview02.setLayoutManager(new GridLayoutManager(this, 4));
+        recyclerview02.setAdapter(mAdapter = new HomeAdapter());
+        recyclerview02.addItemDecoration(new DividerGridItemDecoration(this));
+    }
+
+    private void initView01() {
+        //设置布局管理器
+        recyclerview01.setLayoutManager(new LinearLayoutManager(this));
+        //设置数据
+        recyclerview01.setAdapter(mAdapter = new HomeAdapter());
+        //设置分割线
+        recyclerview01.addItemDecoration(new DividerItemDecoration(this,
+                DividerItemDecoration.VERTICAL_LIST));
     }
 
     protected void initData() {
@@ -69,6 +157,48 @@ public class RecyclerViewActivity extends AppCompatActivity {
             mDatas.add("" + (char) i);
         }
     }
+
+
+    private void initView06() {
+        //初始化布局管理器
+        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        adapter = new MyAdapter(mDatas);
+
+        // 设置布局管理器
+        recyclerview06.setLayoutManager(mLayoutManager);
+        // 设置adapter
+        recyclerview06.setAdapter(mAdapter);
+        recyclerview06.addItemDecoration(new MyDividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        adapter.setOnItemClickListener(new MyAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(RecyclerViewActivity.this,"click " + position + " item", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+                Toast.makeText(RecyclerViewActivity.this,"long click " + position + " item", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void initView07() {
+        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        adapter = new MyAdapter(mDatas);
+
+        // 设置布局管理器
+        recyclerview07.setLayoutManager(mLayoutManager);
+        // 设置adapter
+        recyclerview07.setAdapter(mAdapter);
+        // 设置Item之间间隔样式
+        recyclerview07.addItemDecoration(new MyDividerItemDecoration(this, LinearLayoutManager.HORIZONTAL));
+
+
+
+
+
+    }
+
 
     class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
 
@@ -100,6 +230,11 @@ public class RecyclerViewActivity extends AppCompatActivity {
             }
         }
     }
+
+
+
+
+
 
 
 }

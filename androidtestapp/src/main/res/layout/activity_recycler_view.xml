@@ -7,7 +7,58 @@
     android:orientation="vertical">
     <include layout="@layout/title_activity"/>
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview"
+        android:visibility="gone"
+        android:id="@+id/recyclerview01"
+        android:layout_weight="1"
+        android:divider="#ffff0000"
+        android:dividerHeight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recyclerview02"
+        android:layout_weight="1"
+        android:divider="#ffff0000"
+        android:dividerHeight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recyclerview03"
+        android:layout_weight="1"
+        android:divider="#ffff0000"
+        android:dividerHeight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recyclerview04"
+        android:layout_weight="1"
+        android:divider="#ffff0000"
+        android:dividerHeight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <com.fpp.androidtestapp.activity.impl.recyclerview.LeftSwipeMenuRecyclerView
+
+        android:id="@+id/recyclerview05"
+        android:layout_weight="1"
+        android:divider="#ffff0000"
+        android:dividerHeight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recyclerview06"
+        android:layout_weight="1"
+        android:divider="#ffff0000"
+        android:dividerHeight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recyclerview07"
         android:layout_weight="1"
         android:divider="#ffff0000"
         android:dividerHeight="10dp"
@@ -15,7 +66,6 @@
         android:layout_height="0dp"/>
     <LinearLayout
         android:orientation="horizontal"
-
         android:background="#ff00aa"
         android:layout_width="match_parent"
         android:layout_height="45dp">

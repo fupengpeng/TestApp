@@ -19,7 +19,7 @@ import com.fpp.androidtestapp.activity.impl.datetimepicker.DateTimePackerActivit
 import com.fpp.androidtestapp.activity.impl.numberpicker.NumberPickerActivity;
 import com.fpp.androidtestapp.activity.impl.recyclerview.RecyclerViewActivity;
 import com.fpp.androidtestapp.activity.impl.textview.RadioButtonActivity;
-import com.fpp.androidtestapp.activity.impl.titlebar.TitleBarActivity;
+import com.fpp.androidtestapp.activity.impl.titlebar.ToolBarActivity;
 import com.fpp.androidtestapp.activity.impl.wheelview.WheelViewActivity;
 
 import butterknife.BindView;
@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_twelve:
-                intent = new Intent(this, TitleBarActivity.class);
+                intent = new Intent(this, ToolBarActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_thirteen:

@@ -24,6 +24,10 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration
     private static final int[] ATTRS = new int[] { android.R.attr.listDivider };
     private Drawable mDivider;
 
+    /**
+     * 构造函数
+     * @param context
+     */
     public DividerGridItemDecoration(Context context)
     {
         final TypedArray a = context.obtainStyledAttributes(ATTRS);
@@ -31,6 +35,12 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration
         a.recycle();
     }
 
+    /**
+     *
+     * @param c
+     * @param parent
+     * @param state
+     */
     @Override
     public void onDraw(Canvas c, RecyclerView parent, State state)
     {
@@ -40,6 +50,11 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration
 
     }
 
+    /**
+     *
+     * @param parent
+     * @return
+     */
     private int getSpanCount(RecyclerView parent)
     {
         // 列数
@@ -57,6 +72,11 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration
         return spanCount;
     }
 
+    /**
+     *
+     * @param c
+     * @param parent
+     */
     public void drawHorizontal(Canvas c, RecyclerView parent)
     {
         int childCount = parent.getChildCount();
@@ -75,6 +95,11 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration
         }
     }
 
+    /**
+     *
+     * @param c
+     * @param parent
+     */
     public void drawVertical(Canvas c, RecyclerView parent)
     {
         final int childCount = parent.getChildCount();
@@ -94,6 +119,14 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration
         }
     }
 
+    /**
+     *
+     * @param parent
+     * @param pos
+     * @param spanCount
+     * @param childCount
+     * @return
+     */
     private boolean isLastColum(RecyclerView parent, int pos, int spanCount,
                                 int childCount)
     {
@@ -124,6 +157,14 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration
         return false;
     }
 
+    /**
+     *
+     * @param parent
+     * @param pos
+     * @param spanCount
+     * @param childCount
+     * @return
+     */
     private boolean isLastRaw(RecyclerView parent, int pos, int spanCount,
                               int childCount)
     {
@@ -157,6 +198,12 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration
         return false;
     }
 
+    /**
+     *
+     * @param outRect
+     * @param itemPosition
+     * @param parent
+     */
     @Override
     public void getItemOffsets(Rect outRect, int itemPosition,
                                RecyclerView parent)
