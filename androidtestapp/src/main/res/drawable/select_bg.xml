@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?><!--<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <layer-list>
+            &lt;!&ndash; 相当于padding &ndash;&gt;
+            <item android:left="0dp" android:top="0dp">
+                <shape>
+                    &lt;!&ndash; 指定圆角矩形的4个圆角的半径 &ndash;&gt;
+                    <solid android:color="#6A6767" />
+                    <corners android:radius="4dp" />
+                </shape>
+            </item>
+            <item android:bottom="2dp" android:right="0dp">
+                <shape>
+                    &lt;!&ndash; 指定圆角矩形的4个圆角的半径 &ndash;&gt;
+                    <solid android:color="#cacaca" />
+                    <corners android:radius="4dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_enabled="true">
+        <layer-list>
+            &lt;!&ndash; SHADOW LAYER &ndash;&gt;
+            <item android:left="0dp" android:top="0dp">
+                <shape>
+                    <solid android:color="#4D8BB9" />
+                    <corners android:radius="4dp" />
+                </shape>
+            </item>
+            &lt;!&ndash; CONTENT LAYER &ndash;&gt;
+            &lt;!&ndash; 相当于padding &ndash;&gt;
+            <item android:bottom="2dp" android:right="0dp">
+                <shape>
+                    <solid android:color="#56c5ff" />
+                    <corners android:radius="4dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>-->
+
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+&lt;!&ndash; 阴影部分 &ndash;&gt;
+&lt;!&ndash; 个人觉得更形象的表达：top代表下边的阴影高度，left代表右边的阴影宽度。其实也就是相对应的offset，solid中的颜色是阴影的颜色，也可以设置角度等等 &ndash;&gt;
+<item
+    android:left="2dp"
+    android:top="2dp"
+    android:right="2dp"
+    android:bottom="2dp">
+    <shape android:shape="rectangle" >
+
+        <gradient
+            android:angle="270"
+            android:endColor="#ff000000"
+            android:startColor="#ffffffff" />
+
+        <corners
+            android:bottomLeftRadius="6dip"
+            android:bottomRightRadius="6dip"
+            android:topLeftRadius="6dip"
+            android:topRightRadius="6dip" />
+    </shape>
+</item>
+
+&lt;!&ndash; 背景部分 &ndash;&gt;
+&lt;!&ndash; 形象的表达：bottom代表背景部分在上边缘超出阴影的高度，right代表背景部分在左边超出阴影的宽度（相对应的offset） &ndash;&gt;
+<item
+    android:left="3dp"
+    android:top="3dp"
+    android:right="3dp"
+    android:bottom="3dp">
+    <shape android:shape="rectangle" >
+
+        <gradient
+            android:angle="270"
+            android:startColor="#ffffff"
+            android:endColor="#ff0000"
+             />
+
+        <corners
+            android:bottomLeftRadius="6dip"
+            android:bottomRightRadius="6dip"
+            android:topLeftRadius="6dip"
+            android:topRightRadius="6dip" />
+    </shape>
+</item>
+</layer-list>-->
+
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#792a03" />
+            <corners android:radius="19dp" />
+        </shape>
+    </item>
+
+    <item android:top="1px">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="#ffdb8f"
+                android:startColor="#ffdb8f" />
+            <padding
+                android:bottom="3dp"
+                android:left="5dp"
+                android:right="5dp"
+                android:top="3dp" />
+            <corners android:radius="20dp" />
+        </shape>
+
+    </item>
+
+</layer-list>-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_enabled="false">
+    <layer-list>
+        <!-- 相当于padding -->
+        <item android:left="0dp" android:top="0dp">
+            <shape>
+                <!-- 指定圆角矩形的4个圆角的半径 -->
+                <solid android:color="#6A6767" />
+                <corners android:radius="4dp" />
+            </shape>
+        </item>
+        <item android:bottom="2dp" android:right="0dp">
+            <shape>
+                <!-- 指定圆角矩形的4个圆角的半径 -->
+                <solid android:color="#cacaca" />
+                <corners android:radius="4dp" />
+            </shape>
+        </item>
+    </layer-list>
+</item>
+<item android:state_enabled="true">
+    <layer-list>
+        <!-- SHADOW LAYER -->
+        <item android:left="0dp" android:top="0dp">
+            <shape>
+                <solid android:color="#4D8BB9" />
+                <corners android:radius="4dp" />
+            </shape>
+        </item>
+        <!-- CONTENT LAYER -->
+        <!-- 相当于padding -->
+        <item android:bottom="2dp" android:right="0dp">
+            <shape>
+                <solid android:color="#56c5ff" />
+                <corners android:radius="4dp" />
+            </shape>
+        </item>
+    </layer-list>
+</item>
+</selector>

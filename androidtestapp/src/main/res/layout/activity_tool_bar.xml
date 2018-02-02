@@ -50,6 +50,10 @@
 
     <Button
         android:id="@+id/hide_settings"
+        android:elevation="@dimen/dp_10"
+        android:translationZ="@dimen/dp_45"
+        android:layout_margin="@dimen/dp_10"
+
         android:text="隐藏设置按钮"
         android:layout_width="match_parent"
         android:layout_height="45dp" />
