@@ -5,15 +5,14 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <!--   android:theme="@style/Theme.AppCompat.NoActionBar"   -->
+    <!-- android:theme="@style/Theme.AppCompat.NoActionBar" -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppThemeOne"
-        >
+        android:theme="@style/AppThemeOne">
         <activity android:name=".activity.impl.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,15 +29,12 @@
         <activity android:name=".activity.impl.adapterview.SpinnerActivity" />
         <activity android:name=".activity.impl.recyclerview.RecyclerViewActivity" />
         <activity android:name=".activity.impl.progressbar.PargressBarActivity" />
-
-
-
         <activity android:name=".activity.impl.datetimepicker.DateTimePackerActivity" />
         <activity android:name=".activity.impl.numberpicker.NumberPickerActivity" />
         <activity android:name=".activity.impl.wheelview.WheelViewActivity" />
-        <activity android:name=".activity.impl.titlebar.ToolBarActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
+        <activity
+            android:name=".activity.impl.titlebar.ToolBarActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->
         <provider
@@ -52,6 +48,8 @@
         </provider>
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->
+        <activity android:name=".activity.impl.recyclerview.RcyclerViewHorizontalActivity" />
+        <activity android:name=".activity.impl.recyclerview.LVOrRCVActivity"></activity>
     </application>
 
 </manifest>

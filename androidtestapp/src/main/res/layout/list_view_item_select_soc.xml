@@ -1,72 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:id="@+id/ll_lv_item_select_service"
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="110dp"
-        android:layout_height="155dp"
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_150"
         android:paddingRight="@dimen/dp_5">
 
-
-        <TextView
-            android:id="@+id/tv_lv_item_select_service_add"
-            android:textSize="55sp"
-            android:gravity="center"
-            android:text="+"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+        <RelativeLayout
             android:layout_marginTop="@dimen/dp_15"
-            android:background="@drawable/add_sog_tv_style"
-            android:src="@drawable/task_add"
-            />
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:gravity="center">
+            <com.fpp.androidtestapp.customerview.RoundImageView
+                android:id="@+id/iv_lv_item_select_service_add"
+                app:borderRadius="@dimen/dp_20"
+                app:imageType="round"
+                android:padding="1dp"
+                android:src="@drawable/order_add_item"
+                android:layout_centerInParent="true"
+                android:background="@drawable/order_add_sog_iv_style"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_90" />
+            <TextView
+                android:id="@+id/tv_lv_item_select_service_add"
+                android:background="@drawable/order_add_sog_tv_style_zero"
+                android:textSize="55sp"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_90"
+                />
+
+
+        </RelativeLayout>
 
         <ImageView
             android:id="@+id/iv_lv_item_select_service_remove"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/add_sog_iv_style"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/order_add_sog_iv_style"
             android:src="@drawable/ic_remove_black_24dp" />
 
-        <TextView
-            android:id="@+id/tv_lv_item_select_service_name"
-            android:layout_marginBottom="@dimen/dp_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
             android:layout_above="@+id/linearLayout"
+            android:layout_marginBottom="@dimen/dp_5"
             android:layout_alignParentStart="true"
-            android:textSize="@dimen/order_main_body_little_text_size"
-            android:gravity="center"
-            android:text="水疗"
-            android:textColor="#000000" />
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_lv_item_select_service_name"
+                android:layout_weight="0.5"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/order_main_body_little_text_size"
+                android:gravity="left"
+                android:text="水疗"
+                android:textColor="#000000" />
+            <RelativeLayout
+                android:layout_weight="0.5"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="@dimen/order_main_body_little_text_size"
+                        android:text="￥"
+                        android:textColor="#aaaaaa" />
+
+                    <TextView
+                        android:id="@+id/tv_lv_item_select_service_sale_price"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/order_main_body_little_text_size"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="1.5"
+                        android:textColor="#aaaaaa" />
+                </LinearLayout>
+                <View
+                    android:layout_centerVertical="true"
+                    android:background="#aaaaaa"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="0.5"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:textSize="@dimen/order_main_body_little_text_size"
-                android:text="￥"
-                android:textColor="#555555" />
 
-            <TextView
-                android:id="@+id/tv_lv_item_select_service_price"
-                android:layout_width="wrap_content"
-                android:textSize="@dimen/order_main_body_little_text_size"
-                android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/tv_lv_item_select_service_discount"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/order_main_body_little_text_size"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="1.5"
+                    android:textColor="#ff0000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/order_main_body_little_text_size"
+                    android:text="折"
+                    android:textColor="#ff0000" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="0.5"
+                android:layout_width="@dimen/dp_0"
                 android:gravity="center"
-                android:text="1.5"
-                android:textColor="#555555" />
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/order_main_body_little_text_size"
+                    android:text="￥"
+                    android:textColor="#555555" />
+
+                <TextView
+                    android:id="@+id/tv_lv_item_select_service_discount_price"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/order_main_body_little_text_size"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="1.5"
+                    android:textColor="#555555" />
+
+
+            </LinearLayout>
+
+
         </LinearLayout>
     </RelativeLayout>
 

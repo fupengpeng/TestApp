@@ -40,7 +40,7 @@
         android:layout_height="0dp"/>
 
     <com.fpp.androidtestapp.activity.impl.recyclerview.LeftSwipeMenuRecyclerView
-
+        android:visibility="gone"
         android:id="@+id/recyclerview05"
         android:layout_weight="1"
         android:divider="#ffff0000"
@@ -57,7 +57,7 @@
         android:layout_height="0dp"/>
 
     <android.support.v7.widget.RecyclerView
-        android:visibility="gone"
+
         android:id="@+id/recyclerview07"
         android:layout_weight="1"
         android:divider="#ffff0000"
@@ -69,7 +69,12 @@
         android:background="#ff00aa"
         android:layout_width="match_parent"
         android:layout_height="45dp">
-
+        <TextView
+            android:id="@+id/tv_recycle_view_horizontal"
+            android:gravity="center"
+            android:text="跳转至横向recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </LinearLayout>

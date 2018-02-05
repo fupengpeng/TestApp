@@ -1,5 +1,6 @@
 package com.fpp.androidtestapp.activity.impl.recyclerview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -20,6 +21,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class RecyclerViewActivity extends AppCompatActivity {
 
@@ -44,7 +46,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
     RecyclerView recyclerview06;
     @BindView(R.id.recyclerview07)
     RecyclerView recyclerview07;
+    @BindView(R.id.tv_recycle_view_horizontal)
+    TextView tvRecycleViewHorizontal;
     private List<String> mDatas;
+
     private HomeAdapter mAdapter;
 
     private MyAdapter adapter;
@@ -76,27 +81,27 @@ public class RecyclerViewActivity extends AppCompatActivity {
         */
 
 
-        //效果一
+        //效果一：基本ListView
         initView01();
 
 
-        //效果二
+        //效果二：基本GridView
         initView02();
 
-        //效果三
+        //效果三：同效果二
         initView03();
 
-        //效果四
+        //效果四：同效果二
         initView04();
 
-        //效果五
+        //效果五：滑动点击事件
         initView05();
 
-        //效果六
+        //效果六：同效果一
         initView06();
 
 
-        //效果七
+        //效果七：横向ListView
         initView07();
 
 
@@ -136,8 +141,11 @@ public class RecyclerViewActivity extends AppCompatActivity {
     }
 
     private void initView02() {
-        recyclerview02.setLayoutManager(new GridLayoutManager(this, 4));
+        //设置布局管理器
+        recyclerview02.setLayoutManager(new GridLayoutManager(this, 4));  // 4 : 列数
+        //设置数据
         recyclerview02.setAdapter(mAdapter = new HomeAdapter());
+        //设置分割线
         recyclerview02.addItemDecoration(new DividerGridItemDecoration(this));
     }
 
@@ -172,18 +180,20 @@ public class RecyclerViewActivity extends AppCompatActivity {
         adapter.setOnItemClickListener(new MyAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(RecyclerViewActivity.this,"click " + position + " item", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RecyclerViewActivity.this, "click " + position + " item", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onItemLongClick(View view, int position) {
-                Toast.makeText(RecyclerViewActivity.this,"long click " + position + " item", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RecyclerViewActivity.this, "long click " + position + " item", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void initView07() {
+        // 初始化布局管理器
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        // 初始化适配器
         adapter = new MyAdapter(mDatas);
 
         // 设置布局管理器
@@ -194,7 +204,13 @@ public class RecyclerViewActivity extends AppCompatActivity {
         recyclerview07.addItemDecoration(new MyDividerItemDecoration(this, LinearLayoutManager.HORIZONTAL));
 
 
+    }
 
+    @OnClick(R.id.tv_recycle_view_horizontal)
+    public void onViewClicked() {
+
+        Intent intent = new Intent(this,RcyclerViewHorizontalActivity.class);
+        startActivity(intent);
 
 
     }
@@ -230,11 +246,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
             }
         }
     }
-
-
-
-
-
 
 
 }
