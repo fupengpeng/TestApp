@@ -209,7 +209,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
     @OnClick(R.id.tv_recycle_view_horizontal)
     public void onViewClicked() {
 
-        Intent intent = new Intent(this,RcyclerViewHorizontalActivity.class);
+//        Intent intent = new Intent(this,RcyclerViewHorizontalActivity.class);
+//        startActivity(intent);
+
+        Intent intent = new Intent(this, LVOrRCVActivity.class);
         startActivity(intent);
 
 

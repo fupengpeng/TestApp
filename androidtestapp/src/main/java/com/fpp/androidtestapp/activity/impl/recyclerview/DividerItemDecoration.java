@@ -8,8 +8,9 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
+
+import com.fpp.androidtestapp.util.LogUtils;
 
 /**
  * @author fupengpeng
@@ -39,6 +40,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     }
 
     public void setOrientation(int orientation) {
+        LogUtils.e("setOrientation");
         if (orientation != HORIZONTAL_LIST && orientation != VERTICAL_LIST) {
             throw new IllegalArgumentException("invalid orientation");
         }
@@ -47,7 +49,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
     @Override
     public void onDraw(Canvas c, RecyclerView parent) {
-        Log.v("recyclerview - itemdecoration", "onDraw()");
+        LogUtils.e("recyclerview - itemdecoration", "onDraw()");
 
         if (mOrientation == VERTICAL_LIST) {
             drawVertical(c, parent);

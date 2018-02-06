@@ -14,10 +14,16 @@ public class GoodsItem {
     private String saleprice;
     // 缩略图
     private String imageurl;
-    // 优惠额度
+    // 优惠折扣
     private String discount;
+    // 折扣价
+    private String discountprice;
     // 商品数量
     private int num;
+    // 操作状态
+    private String acstate;
+    // 操作人id
+    private String acuid;
 
     public String getGoodsid() {
         return goodsid;
@@ -67,11 +73,35 @@ public class GoodsItem {
         this.discount = discount;
     }
 
+    public String getDiscountprice() {
+        return discountprice;
+    }
+
+    public void setDiscountprice(String discountprice) {
+        this.discountprice = discountprice;
+    }
+
     public int getNum() {
         return num;
     }
 
     public void setNum(int num) {
         this.num = num;
+    }
+
+    public String getAcstate() {
+        return acstate;
+    }
+
+    public void setAcstate(String acstate) {
+        this.acstate = acstate;
+    }
+
+    public String getAcuid() {
+        return acuid;
+    }
+
+    public void setAcuid(String acuid) {
+        this.acuid = acuid;
     }
 }
