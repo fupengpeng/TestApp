@@ -54,8 +54,10 @@ public class ToolBarActivity extends AppCompatActivity implements View.OnClickLi
         setTitle("");
 
         setSupportActionBar(toolbar);
+
         //是否给左上角图标的左边加上一个返回的图标
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         //改变默认返回按钮图片
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_account_circle_black_24dp);
 

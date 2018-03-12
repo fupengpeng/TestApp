@@ -53,9 +53,16 @@
     </style>
 
     <!--checkbox-->
-    <style name="circlecheckbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+    <style name="circlecheckbox">
         <item name="android:button">@drawable/order_item_select</item>
         <item name="android:paddingLeft">10.0dp</item>
         <item name="android:height">35dp</item>
+    </style>
+
+    <!--AutoCompleteTextView-->
+    <style name="AutoCompleteTextViewStyle">
+        <item name="android:popupBackground">@color/result_points</item>
+        <item name="android:dropDownVerticalOffset">100dp</item>
+        <item name="android:dropDownHorizontalOffset">20dp</item>
     </style>
 </resources>

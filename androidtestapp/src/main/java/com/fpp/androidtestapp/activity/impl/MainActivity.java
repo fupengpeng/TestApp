@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.fpp.androidtestapp.R;
 import com.fpp.androidtestapp.activity.impl.adapterview.AdapterViewActivity;
-import com.fpp.androidtestapp.activity.impl.adapterview.ExpandableListViewActivity;
+import com.fpp.androidtestapp.activity.impl.adapterview.ListViewActivity;
 import com.fpp.androidtestapp.activity.impl.adapterview.SpinnerActivity;
 import com.fpp.androidtestapp.activity.impl.customimageview.ImageViewActivity;
 import com.fpp.androidtestapp.activity.impl.customimageview.ImageViewTwoActivity;
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_six:
-                intent = new Intent(this, ExpandableListViewActivity.class);
+                intent = new Intent(this, ListViewActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_seven:
