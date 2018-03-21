@@ -56,4 +56,20 @@ public class DateUtils {
         sdf.applyPattern("MMddyyyy");
         return sdf.format(date);
     }
+
+
+
+
+    /*手机号处理*/
+
+    /**
+     * 给手机加密中间四位加星号
+     */
+
+    /*邮箱加密处理*/
+
+    /**
+     * 给邮箱加密加星号
+     */
+
 }
