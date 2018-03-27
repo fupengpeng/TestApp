@@ -135,7 +135,7 @@
                 android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#C1FFC1"
-                android:text="two"
+                android:text="状态栏管理"
                 android:textColor="#000000" />
 
             <Button

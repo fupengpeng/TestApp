@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="#ff00ff"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_one"
+                android:gravity="center"
+                android:text="隐藏状态栏一"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_two"
+                android:gravity="center"
+                android:text="隐藏状态栏二"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_three"
+                android:gravity="center"
+                android:text="透明状态栏"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_four"
+                android:gravity="center"
+                android:text="隐藏状态栏、导航栏，点击屏幕再次显示"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_show"
+                android:gravity="center"
+                android:text="使用“影藏状态栏一”之后的显示状态栏"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_five"
+                android:gravity="center"
+                android:text="透明状态栏、导航栏"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_six"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_15"
+                android:text="隐藏状态栏、导航栏，下滑拉出显示透明状态栏、导航栏，再次点击隐藏透明状态栏、导航栏"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_seven"
+                android:gravity="center"
+                android:text="跟随系统横竖屏显示"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_eight"
+                android:gravity="center"
+                android:text="横屏显示"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_nine"
+                android:gravity="center"
+                android:text="竖屏显示"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_ten"
+                android:gravity="center"
+                android:text="状态栏标识颜色变黑"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_eleven"
+                android:gravity="center"
+                android:text="状态栏标识颜色变白"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_twelve"
+                android:gravity="center"
+                android:text="隐藏状态栏，透明导航栏，固定屏幕"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_thirteen"
+                android:gravity="center"
+                android:text="隐藏状态栏，透明导航栏，不固定屏幕"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_fourteen"
+                android:gravity="center"
+                android:text="状态栏标识颜色变白"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_fifteen"
+                android:gravity="center"
+                android:text="状态栏标识颜色变白"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_sixteen"
+                android:gravity="center"
+                android:text="状态栏标识颜色变白"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_seventeen"
+                android:gravity="center"
+                android:text="状态栏标识颜色变白"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_eighteen"
+                android:gravity="center"
+                android:text="状态栏标识颜色变白"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+            <TextView
+                android:id="@+id/tv_atvt_notification_hide_nineteen"
+                android:gravity="center"
+                android:text="状态栏标识颜色变白"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:textSize="55dp"
+                android:gravity="center"
+                android:text="状态栏管理"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

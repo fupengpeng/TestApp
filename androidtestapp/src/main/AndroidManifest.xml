@@ -50,7 +50,8 @@
         <!-- 解决Android 7.0 读写本地文件的问题 -->
         <activity android:name=".activity.impl.recyclerview.RcyclerViewHorizontalActivity" />
         <activity android:name=".activity.impl.recyclerview.LVOrRCVActivity" />
-        <activity android:name=".activity.impl.adapterview.ListViewActivity"></activity>
+        <activity android:name=".activity.impl.adapterview.ListViewActivity" />
+        <activity android:name=".activity.impl.nitificationmanage.NotificationManageActivity"></activity>
     </application>
 
 </manifest>
