@@ -108,37 +108,37 @@
             <TextView
                 android:id="@+id/tv_atvt_notification_hide_fourteen"
                 android:gravity="center"
-                android:text="测试"
+                android:text="测试隐藏  1"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
             <TextView
                 android:id="@+id/tv_atvt_notification_hide_fifteen"
                 android:gravity="center"
-                android:text="状态栏标识颜色变白"
+                android:text="测试显示  1"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
             <TextView
                 android:id="@+id/tv_atvt_notification_hide_sixteen"
                 android:gravity="center"
-                android:text="状态栏标识颜色变白"
+                android:text="测试隐藏  2"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
             <TextView
                 android:id="@+id/tv_atvt_notification_hide_seventeen"
                 android:gravity="center"
-                android:text="状态栏标识颜色变白"
+                android:text="测试显示  2"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
             <TextView
                 android:id="@+id/tv_atvt_notification_hide_eighteen"
                 android:gravity="center"
-                android:text="状态栏标识颜色变白"
+                android:text="测试隐藏  3"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
             <TextView
                 android:id="@+id/tv_atvt_notification_hide_nineteen"
                 android:gravity="center"
-                android:text="状态栏标识颜色变白"
+                android:text="测试显示  3"
                 android:layout_width="match_parent"
                 android:layout_height="45dp" />
 
