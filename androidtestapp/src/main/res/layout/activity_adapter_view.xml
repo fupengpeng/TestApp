@@ -46,12 +46,29 @@
             android:horizontalSpacing="1pt"
             android:numColumns="4"
             android:verticalSpacing="1pt" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal" />
+            <Button
+                android:onClick="flipper"
+                android:text="flipper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:onClick="stack"
+                android:text="stack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
     <!--</LinearLayout>-->

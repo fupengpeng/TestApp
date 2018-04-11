@@ -33,7 +33,7 @@ public class SpinnerActivity extends AppCompatActivity {
 
         String[] arr = {"唐僧", "孙悟空", "猪八戒", "沙僧"};
         List<String> name = new ArrayList<String>();
-        for (int i = 0; i < 5 ; i++) {
+        for (int i = 0; i < 5; i++) {
             name.add("名称" + i);
         }
 

@@ -18,6 +18,7 @@ import com.fpp.androidtestapp.activity.impl.customimageview.ImageViewTwoActivity
 import com.fpp.androidtestapp.activity.impl.datetimepicker.DateTimePackerActivity;
 import com.fpp.androidtestapp.activity.impl.nitificationmanage.NotificationManageActivity;
 import com.fpp.androidtestapp.activity.impl.numberpicker.NumberPickerActivity;
+import com.fpp.androidtestapp.activity.impl.progressbar.ProgressBarActivity;
 import com.fpp.androidtestapp.activity.impl.recyclerview.RecyclerViewActivity;
 import com.fpp.androidtestapp.activity.impl.textview.RadioButtonActivity;
 import com.fpp.androidtestapp.activity.impl.titlebar.ToolBarActivity;
@@ -189,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_fourteen:
-                intent = new Intent(this, ImageViewTwoActivity.class);
+                intent = new Intent(this, ProgressBarActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_fifteen:

@@ -71,14 +71,14 @@ public class ListViewActivity extends AppCompatActivity {
         lvAtvtListViewTwo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                ToastUtils.showLong(ListViewActivity.this,"单击 " + names);
+                ToastUtils.showLong(ListViewActivity.this, "单击 " + names);
             }
         });
 
         lvAtvtListViewTwo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                ToastUtils.showLong(ListViewActivity.this,names[i]);
+                ToastUtils.showLong(ListViewActivity.this, names[i]);
             }
 
             @Override

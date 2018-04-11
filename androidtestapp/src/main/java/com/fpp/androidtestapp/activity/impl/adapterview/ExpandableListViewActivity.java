@@ -42,15 +42,15 @@ public class ExpandableListViewActivity extends AppCompatActivity {
                     R.drawable.shilipic,
                     R.drawable.shilipic
             };
-            private  String[] armTypes = new String[]{
+            private String[] armTypes = new String[]{
                     "神族兵种",
                     "虫族兵种",
                     "人族兵种"
             };
-            private String [][] arms = new String[][]{
-                    {"狂战士","龙骑士","黑暗圣堂","点兵"},
-                    {"小狗","小猫","小马","小龙"},
-                    {"机枪手","护士MM","幽灵","吸血鬼"},
+            private String[][] arms = new String[][]{
+                    {"狂战士", "龙骑士", "黑暗圣堂", "点兵"},
+                    {"小狗", "小猫", "小马", "小龙"},
+                    {"机枪手", "护士MM", "幽灵", "吸血鬼"},
             };
 
 
@@ -88,7 +88,7 @@ public class ExpandableListViewActivity extends AppCompatActivity {
             @Override
             public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
                 TextView textView = getTextView();
-                textView.setText(getChild(i,i1).toString());
+                textView.setText(getChild(i, i1).toString());
                 return textView;
             }
 
@@ -113,12 +113,12 @@ public class ExpandableListViewActivity extends AppCompatActivity {
                 return armTypes.length;
             }
 
-            private TextView getTextView(){
-                AbsListView.LayoutParams lp = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,64);
+            private TextView getTextView() {
+                AbsListView.LayoutParams lp = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 64);
                 TextView textView = new TextView(ExpandableListViewActivity.this);
                 textView.setLayoutParams(lp);
                 textView.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
-                textView.setPadding(36,0,0,0);
+                textView.setPadding(36, 0, 0, 0);
                 textView.setTextSize(20);
                 return textView;
             }
@@ -135,10 +135,6 @@ public class ExpandableListViewActivity extends AppCompatActivity {
                 ll.addView(textView);
                 return null;
             }
-
-
-
-
 
 
             @Override
@@ -185,8 +181,6 @@ public class ExpandableListViewActivity extends AppCompatActivity {
         };
 
         list.setAdapter(adapter);
-
-
 
 
     }

@@ -1,5 +1,6 @@
 package com.fpp.androidtestapp.activity.impl.adapterview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -100,5 +101,14 @@ public class AdapterViewActivity extends AppCompatActivity {
         mauto.setAdapter(aa);
         mauto.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
 
+    }
+
+    public void flipper(View view){
+        Intent intent = new Intent(AdapterViewActivity.this,AdapterViewFlipperActivity.class);
+        startActivity(intent);
+    }
+    public void stack(View view){
+        Intent intent = new Intent(AdapterViewActivity.this,StackViewActivity.class);
+        startActivity(intent);
     }
 }

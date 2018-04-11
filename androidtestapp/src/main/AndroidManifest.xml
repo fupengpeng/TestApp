@@ -28,7 +28,7 @@
         <activity android:name=".activity.impl.adapterview.ExpandableListViewActivity" />
         <activity android:name=".activity.impl.adapterview.SpinnerActivity" />
         <activity android:name=".activity.impl.recyclerview.RecyclerViewActivity" />
-        <activity android:name=".activity.impl.progressbar.PargressBarActivity" />
+        <activity android:name=".activity.impl.progressbar.ProgressBarActivity" />
         <activity android:name=".activity.impl.datetimepicker.DateTimePackerActivity" />
         <activity android:name=".activity.impl.numberpicker.NumberPickerActivity" />
         <activity android:name=".activity.impl.wheelview.WheelViewActivity" />
@@ -51,7 +51,9 @@
         <activity android:name=".activity.impl.recyclerview.RcyclerViewHorizontalActivity" />
         <activity android:name=".activity.impl.recyclerview.LVOrRCVActivity" />
         <activity android:name=".activity.impl.adapterview.ListViewActivity" />
-        <activity android:name=".activity.impl.nitificationmanage.NotificationManageActivity"></activity>
+        <activity android:name=".activity.impl.nitificationmanage.NotificationManageActivity" />
+        <activity android:name=".activity.impl.adapterview.AdapterViewFlipperActivity" />
+        <activity android:name=".activity.impl.adapterview.StackViewActivity"></activity>
     </application>
 
 </manifest>
