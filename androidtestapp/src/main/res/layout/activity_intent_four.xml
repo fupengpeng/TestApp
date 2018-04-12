@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:onClick="overrideType"
+        android:gravity="center"
+        android:editable="false"
+        android:cursorVisible="false"
+        android:text="覆盖Type属性"
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"  />
+    <Button
+        android:onClick="overrideData"
+        android:gravity="center"
+        android:editable="false"
+        android:cursorVisible="false"
+        android:text="覆盖Data属性"
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"  />
+    <Button
+        android:onClick="dataAndType"
+        android:gravity="center"
+        android:editable="false"
+        android:cursorVisible="false"
+        android:text="同时设置Data和Type属性"
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"  />
+
+</LinearLayout>

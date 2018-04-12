@@ -144,7 +144,7 @@
                 android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#54FF9F"
-                android:text="two"
+                android:text="Progressbar"
                 android:textColor="#000000" />
 
             <Button
@@ -153,7 +153,7 @@
                 android:layout_height="45dp"
                 android:layout_margin="5dp"
                 android:background="#00FF7F"
-                android:text="two"
+                android:text="Intent测试"
                 android:textColor="#000000" />
 
             <Button

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:onClick="skipIntentTwoActivity"
+        android:textSize="@dimen/dp_25"
+        android:gravity="center"
+        android:text="点击跳转至IntentTwoActivity"
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp" />
+    <TextView
+        android:onClick="skipIntentThreeActivity"
+        android:background="#ffaa00"
+        android:textSize="@dimen/dp_25"
+        android:gravity="center"
+        android:text="点击跳转至IntentThreeActivity"
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"  />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <EditText
+            android:id="@+id/et_atvt_intent_one_name"
+            android:gravity="center"
+            android:editable="false"
+            android:cursorVisible="false"
+            android:hint="显示联系人姓名"
+            android:layout_width="match_parent"
+            android:layout_weight="0.1"
+            android:layout_height="0dp"  />
+        <EditText
+            android:id="@+id/et_atvt_intent_one_number"
+            android:gravity="center"
+            android:editable="false"
+            android:cursorVisible="false"
+            android:hint="显示联系人电话"
+            android:layout_width="match_parent"
+            android:layout_weight="0.1"
+            android:layout_height="0dp"  />
+        <Button
+            android:id="@+id/btn_atvt_intent_one"
+            android:onClick="lookOverLinkman"
+            android:gravity="center"
+            android:editable="false"
+            android:cursorVisible="false"
+            android:text="查看联系人"
+            android:layout_width="match_parent"
+            android:layout_weight="0.1"
+            android:layout_height="0dp"  />
+
+    </LinearLayout>
+    <Button
+        android:onClick="returnHome"
+        android:gravity="center"
+        android:editable="false"
+        android:cursorVisible="false"
+        android:text="返回系统桌面"
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"  />
+    <Button
+        android:onClick="skipIntentFourActivity"
+        android:gravity="center"
+        android:editable="false"
+        android:cursorVisible="false"
+        android:text="跳转IntentFourActivity"
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"  />
+
+    <Button
+        android:onClick="scheme"
+        android:gravity="center"
+        android:editable="false"
+        android:cursorVisible="false"
+        android:text="跳转测试 scheme "
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"  />
+
+    <Button
+        android:onClick="schemeHostPort"
+        android:gravity="center"
+        android:editable="false"
+        android:cursorVisible="false"
+        android:text="跳转测试 schemeHostPort "
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"  />
+
+    <Button
+        android:onClick="schemeHostPast"
+        android:gravity="center"
+        android:editable="false"
+        android:cursorVisible="false"
+        android:text="跳转测试 schemeHostPast "
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"  />
+
+    <Button
+        android:onClick="schemeHostPastPath"
+        android:gravity="center"
+        android:editable="false"
+        android:cursorVisible="false"
+        android:text="跳转测试 schemeHostPastPath "
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"  />
+
+    <Button
+        android:onClick="schemeHostPastPathType"
+        android:gravity="center"
+        android:editable="false"
+        android:cursorVisible="false"
+        android:text="跳转测试 schemeHostPastPathType "
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"  />
+</LinearLayout>

@@ -16,6 +16,7 @@ import com.fpp.androidtestapp.activity.impl.adapterview.SpinnerActivity;
 import com.fpp.androidtestapp.activity.impl.customimageview.ImageViewActivity;
 import com.fpp.androidtestapp.activity.impl.customimageview.ImageViewTwoActivity;
 import com.fpp.androidtestapp.activity.impl.datetimepicker.DateTimePackerActivity;
+import com.fpp.androidtestapp.activity.impl.intent.IntentOneActivity;
 import com.fpp.androidtestapp.activity.impl.nitificationmanage.NotificationManageActivity;
 import com.fpp.androidtestapp.activity.impl.numberpicker.NumberPickerActivity;
 import com.fpp.androidtestapp.activity.impl.progressbar.ProgressBarActivity;
@@ -194,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_fifteen:
-                intent = new Intent(this, ImageViewTwoActivity.class);
+                intent = new Intent(this, IntentOneActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_atvt_main_sixteen:
