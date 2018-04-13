@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <array name="pics">
+        <item>@drawable/ic_search_24dp</item>
+        <item>@drawable/ic_search_24dp</item>
+        <item>@drawable/ic_search_24dp</item>
+    </array>
+
+    <integer-array name="ages">
+        <item>21</item>
+        <item>35</item>
+        <item>11</item>
+    </integer-array>
+    <string-array name="names">
+        <item>张三</item>
+        <item>李四</item>
+        <item>王五</item>
+    </string-array>
+
     <string-array name="books">
         <item>疯狂java讲义</item>
         <item>疯狂Android讲义</item>

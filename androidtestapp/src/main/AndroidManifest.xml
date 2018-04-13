@@ -72,39 +72,97 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.impl.intent.IntentFourActivity">
-
             <intent-filter>
+
                 <!-- 指定该Activity能响应Action属性值为指定字符串的Intent -->
                 <action android:name="com.fpp.androidtestapp.activity.impl.intent.THREE_ACTION" />
                 <!-- 指定该Activity能响应Category属性值默认属性值的Intent -->
                 <category android:name="android.intent.category.DEFAULT" />
                 <!-- 指定该Activity的data属性 -->
-                <!--<data android:mimeType="ad"
+                <!--
+                    <data android:mimeType="ad"
                     android:scheme="ad"
                     android:host="@string/action_settings"
                     android:port="25"
                     android:path="asd/asd"
                     android:pathPrefix="52"
                     android:pathPattern="asdf"
-                    />-->
+                    />
+                -->
 
             </intent-filter>
         </activity>
-        <activity android:name=".activity.impl.intent.IntentFiveActivity" >
+        <activity android:name=".activity.impl.intent.IntentFiveActivity">
+            <intent-filter>
 
+                <!-- 指定该Activity能响应Action属性值为指定字符串的Intent -->
+                <action android:name="xx" />
+                <!-- 指定该Activity能响应Category属性值默认属性值的Intent -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 指定该Activity的data属性 -->
+                <data android:scheme="zhi" />
+            </intent-filter>
         </activity>
-        <activity android:name=".activity.impl.intent.IntentSixActivity" >
+        <activity android:name=".activity.impl.intent.IntentSixActivity">
+            <intent-filter>
 
+                <!-- 指定该Activity能响应Action属性值为指定字符串的Intent -->
+                <action android:name="xx" />
+                <!-- 指定该Activity能响应Category属性值默认属性值的Intent -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 指定该Activity的data属性 -->
+                <data
+                    android:host="www.fpp.com"
+                    android:port="8088"
+                    android:scheme="zhi" />
+            </intent-filter>
         </activity>
-        <activity android:name=".activity.impl.intent.IntentSevenActivity" >
+        <activity android:name=".activity.impl.intent.IntentSevenActivity">
+            <intent-filter>
 
+                <!-- 指定该Activity能响应Action属性值为指定字符串的Intent -->
+                <action android:name="xx" />
+                <!-- 指定该Activity能响应Category属性值默认属性值的Intent -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 指定该Activity的data属性 -->
+                <data
+                    android:host="www.fpp.com"
+                    android:path="/tests"
+                    android:scheme="zhi" />
+            </intent-filter>
         </activity>
-        <activity android:name=".activity.impl.intent.IntentEightActivity" >
+        <activity android:name=".activity.impl.intent.IntentEightActivity">
+            <intent-filter>
 
+                <!-- 指定该Activity能响应Action属性值为指定字符串的Intent -->
+                <action android:name="xx" />
+                <!-- 指定该Activity能响应Category属性值默认属性值的Intent -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 指定该Activity的data属性 -->
+                <data
+                    android:host="www.fpp.com"
+                    android:path="/tests"
+                    android:port="8088"
+                    android:scheme="zhi" />
+            </intent-filter>
         </activity>
         <activity android:name=".activity.impl.intent.IntentNineActivity">
+            <intent-filter>
 
+                <!-- 指定该Activity能响应Action属性值为指定字符串的Intent -->
+                <action android:name="xx" />
+                <!-- 指定该Activity能响应Category属性值默认属性值的Intent -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 指定该Activity的data属性 -->
+                <data
+                    android:host="www.fpp.com"
+                    android:mimeType="abc/xyz"
+                    android:path="/tests"
+                    android:port="8088"
+                    android:scheme="zhi" />
+            </intent-filter>
         </activity>
+        <activity android:name=".activity.impl.intent.IntentTenActivity"></activity>
     </application>
 
 </manifest>

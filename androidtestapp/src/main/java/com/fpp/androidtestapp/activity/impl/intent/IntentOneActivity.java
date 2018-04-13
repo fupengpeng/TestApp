@@ -121,18 +121,21 @@ public class IntentOneActivity extends AppCompatActivity {
         intent.setData(Uri.parse("zhi://www.fpps.com:8008/test"));
         startActivity(intent);
     }
+
     public void schemeHostPort(View source) {
         Intent intent = new Intent(this, IntentSixActivity.class);
         // 设置Data属性
         intent.setData(Uri.parse("zhi://www.fpp.com:8088/test"));
         startActivity(intent);
     }
+
     public void schemeHostPast(View source) {
         Intent intent = new Intent(this, IntentSevenActivity.class);
         // 设置Data属性
         intent.setData(Uri.parse("zhi://www.fpp.com:8080/tests"));
         startActivity(intent);
     }
+
     public void schemeHostPastPath(View source) {
         Intent intent = new Intent(this, IntentEightActivity.class);
         // 设置Data属性
@@ -143,7 +146,61 @@ public class IntentOneActivity extends AppCompatActivity {
     public void schemeHostPastPathType(View source) {
         Intent intent = new Intent(this, IntentNineActivity.class);
         // 设置Data属性
-        intent.setDataAndType(Uri.parse("zhi://www.fpp.com:8088/tests"),"abc/xyz");
+        intent.setDataAndType(Uri.parse("zhi://www.fpp.com:8088/tests"), "abc/xyz");
+        startActivity(intent);
+    }
+
+    /**
+     * 打开网页
+     * @param source
+     */
+    public void test(View source) {
+        Intent intent = new Intent();
+        String data = "https://www.baidu.com/";
+        // 根据指定字符串解析出Uri对象
+        Uri uri = Uri.parse(data);
+        // 为Intent 设置Action属性
+        intent.setAction(Intent.ACTION_VIEW);
+        // 设置Data属性
+        intent.setData(uri);
+        startActivity(intent);
+    }
+
+    /**
+     * 编辑标识为“1”的联系人信息
+     * @param source
+     */
+    public void edit(View source) {
+        Intent intent = new Intent();
+        // 标识为  “1”  的联系人信息
+        String data = "content://com.android.contacts/contacts/1";
+        // 根据指定字符串解析出Uri对象
+        Uri uri = Uri.parse(data);
+        // 为Intent 设置Action属性（编辑）
+        intent.setAction(Intent.ACTION_EDIT);
+        // 设置Data属性
+        intent.setData(uri);
+        startActivity(intent);
+    }
+
+    /**
+     * 拨打电话为“15700001111”----拨号界面
+     * @param source
+     */
+    public void call(View source) {
+        Intent intent = new Intent();
+        String data = "tes:15700001111";
+        // 根据指定字符串解析出Uri对象
+        Uri uri = Uri.parse(data);
+        // 为Intent 设置Action属性
+        intent.setAction(Intent.ACTION_DIAL);
+        // 设置Data属性
+        intent.setData(uri);
+        startActivity(intent);
+    }
+
+    public void skipIntentTenActivity(View source) {
+        Intent intent = new Intent(this, IntentTenActivity.class);
         startActivity(intent);
     }
 
