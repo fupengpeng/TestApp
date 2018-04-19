@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -39,10 +40,6 @@ public class ToolBarActivity extends AppCompatActivity implements View.OnClickLi
         Button hideSettings = (Button) findViewById(R.id.hide_settings);
         showSettings.setOnClickListener(this);
         hideSettings.setOnClickListener(this);
-
-
-
-
 
     }
 

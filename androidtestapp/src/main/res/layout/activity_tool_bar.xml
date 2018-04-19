@@ -6,27 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!--<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        app:navigationIcon="@drawable/task_switch"
-        android:navigationIcon="@drawable/task_call_mobile"
-        android:background="@color/colorAccent">
-
-        <TextView
-            android:id="@+id/toolbar_title"
-            android:text="一键开单"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textSize="20sp" />
-    </android.support.v7.widget.Toolbar>-->
-
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
